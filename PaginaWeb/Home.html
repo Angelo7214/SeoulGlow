@@ -1,11 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seoul Glow — Korean Skincare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+<div class="util-bar">
+  <div class="util-track" id="utilTrack">
+    <div class="util-slide active">💳 Aceptamos pagos con Tarjeta, Yape o Plin</div>
+    <div class="util-slide">🚚 Envíos a todo el Perú en 24-48h</div>
+    <div class="util-slide">💬 Atención personalizada 24/7</div>
+  </div>
+  <div class="util-dots" id="utilDots"></div>
+</div>
+
+<header class="site">
+  <div class="header-row">
+    <div class="logo">🌸 SEOUL GLOW<small>Korean Skincare</small></div>
+    <div class="search">
+      <input type="text" placeholder="Buscar productos, marcas o tipos de piel...">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </div>
+    <div class="header-icons">
+      <div class="icon-col">📍<span>Tiendas</span></div>
+      <div class="icon-col">👤<span>Iniciar sesión</span></div>
+      <div class="icon-col">🛍️<span class="cart-badge">0</span><span>Carrito</span></div>
+    </div>
+  </div>
+  <nav class="main">
+    <div class="nav-row">
+      <a href="#">PRODUCTOS ▾</a>
+      <a href="#">MARCAS ▾</a>
+      <a href="#">TIPOS DE PIEL ▾</a>
+      <a href="#">TIPS & RUTINA</a>
+
+      <!-- ===== 2. Ofertas + Novedades resaltados en un grupo tipo "pill" ===== -->
+      <div class="nav-highlight">
+        <a href="#" class="on">OFERTAS</a>
+        <a href="#">NOVEDADES</a>
+
+      </div>
+      <a href="#" class="nav-tail">SOBRE NOSOTROS</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== Hero carousel (se mantiene, ya funcionaba como carrusel en el wireframe) ===== -->
+<div class="hero-carousel">
+  <div class="hero-track" id="heroTrack">
+    <div class="hero-slide">
+      <div>
+        <div class="eyebrow">Nueva colección</div>
+        <h1>Tu mejor piel,<br><em>tu mejor versión.</em></h1>
+        <p>Descubre lo mejor del skincare coreano para una piel saludable y radiante.</p>
+        <a href="#" class="cta-btn">COMPRAR AHORA →</a>
+      </div>
+      <div class="hero-art"><div class="hero-bottles"><div class="bottle" style="height:90px"></div><div class="bottle" style="height:120px"></div><div class="bottle" style="height:75px"></div><div class="bottle" style="height:100px"></div></div></div>
+    </div>
+    <div class="hero-slide">
+      <div>
+        <div class="eyebrow">Ritual coreano</div>
+        <h1>10 pasos hacia<br><em>una piel de vidrio.</em></h1>
+        <p>Aprende la rutina paso a paso con las marcas más queridas de Corea.</p>
+        <a href="#" class="cta-btn">VER RUTINA →</a>
+      </div>
+      <div class="hero-art"><div class="hero-bottles"><div class="bottle" style="height:70px"></div><div class="bottle" style="height:110px"></div><div class="bottle" style="height:95px"></div></div></div>
+    </div>
+    <div class="hero-slide">
+      <div>
+        <div class="eyebrow">-20% esta semana</div>
+        <h1>Ofertas que tu piel<br><em>va a agradecer.</em></h1>
+        <p>Los favoritos de siempre, con descuentos por tiempo limitado.</p>
+        <a href="#" class="cta-btn">VER OFERTAS →</a>
+      </div>
+      <div class="hero-art"><div class="hero-bottles"><div class="bottle" style="height:105px"></div><div class="bottle" style="height:80px"></div><div class="bottle" style="height:130px"></div></div></div>
+    </div>
+  </div>
+  <button class="hero-nav prev" onclick="moveHero(-1)">‹</button>
+  <button class="hero-nav next" onclick="moveHero(1)">›</button>
+  <div class="hero-dots" id="heroDots"></div>
+</div>
+
+<!-- ===== 3. Fila de iconos estáticos → convertida en carrusel ===== -->
+<div class="feature-carousel">
+  <div class="feature-track-wrap">
+    <div class="feature-track" id="featureTrack">
+      <div class="feature-slide">
+        <svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="7" width="15" height="10" rx="1.5"/><path d="M16 10h3l3 3v4h-6z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>
+        <div><h4>Envíos a todo el Perú</h4><p>Rápidos y seguros</p></div>
+      </div>
+      <div class="feature-slide">
+        <svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V5z"/><path d="m9 12 2 2 4-4"/></svg>
+        <div><h4>Productos 100% originales</h4><p>Garantía de autenticidad</p></div>
+      </div>
+      <div class="feature-slide">
+        <svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <div><h4>Compra segura</h4><p>Tus datos protegidos</p></div>
+      </div>
+      <div class="feature-slide">
+        <svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4.2-1.1L3 20l1.1-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg>
+        <div><h4>Atención personalizada</h4><p>Te ayudamos 24/7</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="feature-dots" id="featureDots"></div>
+</div>
+
+<!-- ===== Tipos de piel — imágenes simples en vez de ilustraciones complejas ===== -->
+<section>
+  <div class="wrap">
+    <div class="section-title"><div class="tag">✿ Compra según tu tipo de piel</div></div>
+    <div class="skin-grid">
+      <div class="skin-card"><div class="skin-avatar" style="background:#eaf4ff;">💧</div><span>Piel Grasa/Mixta</span></div>
+      <div class="skin-card"><div class="skin-avatar" style="background:#eafaf0;">🍃</div><span>Piel Seca</span></div>
+      <div class="skin-card"><div class="skin-avatar" style="background:#f3edff;">🌷</div><span>Piel Sensible</span></div>
+      <div class="skin-card"><div class="skin-avatar" style="background:#fff3e6;">🌼</div><span>Piel Madura</span></div>
+      <div class="skin-card"><div class="skin-avatar" style="background:#ffeef1;">✨</div><span>Piel con Acné</span></div>
+      <div class="skin-card"><div class="skin-avatar" style="background:#eafbfa;">🌿</div><span>Piel Normal</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Productos destacados ===== -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="prod-header">
+      <div><div class="tag">LO MÁS AMADO 💗</div><h2>Los productos de alta calidad</h2></div>
+      <a href="#">Ver todos →</a>
+    </div>
+    <div class="prod-grid" id="prodGrid"></div>
+
+    <div class="locator">
+      <div><h3>Encuentra tu tienda más cercana</h3><p>Selecciona tu ubicación y descubre la tienda Seoul Glow más cerca de ti.</p></div>
+      <a href="#" class="cta-btn">VER TIENDAS →</a>
+    </div>
+
+    <div class="value-band">
+      <div class="value-item"><span class="vicon">💧</span><div><h4>Ingredientes Limpios & Veganos</h4><p>Fórmulas coreanas puras, seguras y libres de químicos agresivos.</p></div></div>
+      <div class="value-item"><span class="vicon">🌸</span><div><h4>Hidratación Profunda & Glow Real</h4><p>Texturas ligeras que transforman tu piel y le devuelven luminosidad.</p></div></div>
+      <div class="value-item"><span class="vicon">🐰</span><div><h4>Cruelty Free & Belleza Consciente</h4><p>Seleccionamos marcas éticas y respetuosas con los animales.</p></div></div>
+      <div class="value-item"><span class="vicon">💡</span><div><h4>Innovación K-Beauty Comprobada</h4><p>Tecnología coreana avanzada con resultados visibles y seguros.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. Reseñas a todo el ancho, alimentadas por una pequeña "base de datos" en JS ===== -->
+<section class="reviews-full">
+  <div class="wrap">
+    <div class="section-title"><div class="tag">Lo que dicen de nosotros 💕</div><h2>Reseñas de nuestra comunidad</h2></div>
+    <p class="subtitle">Mostrando 4 de <span id="reviewCount">0</span> reseñas verificadas</p>
+    <div class="review-grid" id="reviewGrid"></div>
+    <div class="review-more"><button class="btn-outline" id="loadMoreBtn">Cargar más reseñas</button></div>
+    <p class="db-note">Reseñas gestionadas desde una pequeña base de datos interna (simulada en este prototipo)</p>
+  </div>
+</section>
+
+<!-- ===== Newsletter ===== -->
+<div class="newsletter">
+  <div class="wrap nl-row">
+    <div><h3>¡Únete a Seoul Glow!</h3><p>Recibe novedades, ofertas exclusivas y tips para tu piel.</p></div>
+    <div class="nl-form"><input type="email" placeholder="Ingresa tu correo electrónico"><button>SUSCRIBIRME</button></div>
+  </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo" style="font-size:19px;">🌸 SEOUL GLOW</div>
+        <p>Lo mejor del skincare coreano para una piel saludable y radiante.</p>
+        <div class="socials"><a href="#">IG</a><a href="#">TT</a><a href="#">FB</a></div>
+      </div>
+      <div><h5>COMPRAR</h5><ul><li><a href="#">Productos</a></li><li><a href="#">Marcas</a></li><li><a href="#">Tipos de piel</a></li><li><a href="#">Ofertas</a></li></ul></div>
+      <div><h5>AYUDA</h5><ul><li><a href="#">Preguntas frecuentes</a></li><li><a href="#">Envíos y devoluciones</a></li><li><a href="#">Métodos de pago</a></li><li><a href="#">Términos y condiciones</a></li>
+        <!-- ===== 5. "Políticas de privacidad" ya no lleva a una página: abre el chatbot ===== -->
+        <li><a href="#" class="privacy-link" onclick="openChat(true);return false;">Políticas de privacidad</a></li>
+      </ul></div>
+      <div><h5>SOBRE NOSOTROS</h5><ul><li><a href="#">Nuestra historia</a></li><li><a href="#">Misión, visión y valores</a></li><li><a href="#">Sostenibilidad</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><h5>MI CUENTA</h5><ul><li><a href="#">Iniciar sesión</a></li><li><a href="#">Mis pedidos</a></li><li><a href="#">Mis favoritos</a></li><li><a href="#">Direcciones</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 Seoul Glow. Todos los derechos reservados.</span>
+      <div class="payment-icons"><span>VISA</span><span>MC</span><span>YAPE</span><span>PLIN</span><span>BCP</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Chatbot (reemplaza la página de Políticas de privacidad) ===== -->
+<button class="chat-fab" onclick="openChat(false)">💬</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div><strong>Asistente Seoul Glow</strong><br><span>Normalmente responde al instante</span></div>
+    <button onclick="closeChat()">×</button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="Escribe tu pregunta...">
+    <button onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
