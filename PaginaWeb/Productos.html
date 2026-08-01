@@ -1,11 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seoul Glow — Korean Skincare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
+
+<div class="util-bar">
+  <div class="util-track" id="utilTrack">
+    <div class="util-slide active">💳 Aceptamos pagos con Tarjeta, Yape o Plin</div>
+    <div class="util-slide">🚚 Envíos a todo el Perú en 24-48h</div>
+    <div class="util-slide">💬 Atención personalizada 24/7</div>
+  </div>
+  <div class="util-dots" id="utilDots"></div>
+</div>
+
+<header class="site">
+  <div class="header-row">
+    <div class="logo">🌸 SEOUL GLOW<small>Korean Skincare</small></div>
+    <div class="search">
+      <input type="text" placeholder="Buscar productos, marcas o tipos de piel...">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </div>
+    <div class="header-icons">
+      <div class="icon-col">📍<span>Tiendas</span></div>
+      <div class="icon-col">👤<span>Iniciar sesión</span></div>
+      <div class="icon-col">🛍️<span class="cart-badge">0</span><span>Carrito</span></div>
+    </div>
+  </div>
+  <nav class="main">
+    <div class="nav-row">
+      <a href="#">PRODUCTOS ▾</a>
+      <a href="#">MARCAS ▾</a>
+      <a href="#">TIPOS DE PIEL ▾</a>
+      <a href="#">TIPS & RUTINA</a>
+
+      <!-- ===== 2. Ofertas + Novedades resaltados en un grupo tipo "pill" ===== -->
+      <div class="nav-highlight">
+        <a href="#" class="on">OFERTAS</a>
+        <a href="#">NOVEDADES</a>
+
+      </div>
+      <a href="#" class="nav-tail">SOBRE NOSOTROS</a>
+    </div>
+  </nav>
+</header>
+<section class="catalog-page wrap">
+  <!-- Breadcrumb -->
+  <div class="catalog-breadcrumb">
+    <a href="#">Inicio</a>
+    <span>›</span>
+    <a href="#">Productos</a>
+    <span>›</span>
+    <strong>Catálogo</strong>
+  </div>
+
+  <div class="catalog-header">
+    <div>
+      <h1>Catálogo de productos</h1>
+      <p>Encuentra el mejor skincare coreano para tu tipo de piel.</p>
+    </div>
+
+    <div class="catalog-badge">
+      <span>🎁</span>
+      <div>
+        <strong>Envío gratis</strong>
+        <small>En compras mayores a S/149</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="catalog-layout">
+
+    <!-- Sidebar filtros -->
+    <aside class="catalog-sidebar">
+      <button class="btn-filter">Ocultar filtros</button>
+
+      <div class="filter-group">
+        <h4>Tipo de piel</h4>
+        <label><input type="checkbox"> Piel seca</label>
+        <label><input type="checkbox"> Piel grasa</label>
+        <label><input type="checkbox"> Piel mixta</label>
+        <label><input type="checkbox"> Piel sensible</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Categoría</h4>
+        <label><input type="checkbox"> Limpiadores</label>
+        <label><input type="checkbox"> Sérums</label>
+        <label><input type="checkbox"> Protectores solares</label>
+        <label><input type="checkbox"> Cremas hidratantes</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Rango de precio</h4>
+        <input type="range" min="0" max="300">
+        <div class="price-range">
+          <span>S/0</span>
+          <span>S/300+</span>
+        </div>
+      </div>
+
+      <button class="btn-apply">Aplicar filtros</button>
+    </aside>
+
+    <!-- Productos -->
+    <div class="catalog-content">
+
+      <div class="catalog-toolbar">
+        <div class="toolbar-left">
+          <label>Ordenar por:</label>
+          <select>
+            <option>Más vendidos</option>
+            <option>Precio: menor a mayor</option>
+            <option>Precio: mayor a menor</option>
+            <option>Novedades</option>
+          </select>
+        </div>
+
+        <div class="toolbar-right">
+          Mostrando 1–12 de 126 productos
+        </div>
+      </div>
+
+      <div class="catalog-grid">
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <span class="discount">-20%</span>
+      <img src="Img/anua-toner.png" alt="ANUA Toner">
+    </div>
+    <div class="card-body">
+      <small class="brand">ANUA</small>
+      <h3>Heartleaf 77% Soothing Toner</h3>
+      <div class="tags"><span>Piel sensible</span></div>
+      <div class="price-row"><strong>S/79.90</strong><del>S/99.90</del></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <span class="discount">-15%</span>
+      <img src="Img/cosrx-serum.png" alt="COSRX Serum">
+    </div>
+    <div class="card-body">
+      <small class="brand">COSRX</small>
+      <h3>Advanced Snail 96 Mucin Power Essence</h3>
+      <div class="tags"><span>Todo tipo de piel</span></div>
+      <div class="price-row"><strong>S/89.90</strong><del>S/105.90</del></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <span class="discount">NUEVO</span>
+      <img src="Img/boj-spf.png" alt="Beauty of Joseon">
+    </div>
+    <div class="card-body">
+      <small class="brand">BEAUTY OF JOSEON</small>
+      <h3>Relief Sun SPF50+ Rice + Probiotics</h3>
+      <div class="tags"><span>Piel mixta</span></div>
+      <div class="price-row"><strong>S/69.90</strong></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <span class="discount">-10%</span>
+      <img src="Img/isntree-gel.png" alt="Isntree Gel Cream">
+    </div>
+    <div class="card-body">
+      <small class="brand">ISNTREE</small>
+      <h3>Centella Calming Gel Cream</h3>
+      <div class="tags"><span>Piel grasa</span></div>
+      <div class="price-row"><strong>S/89.90</strong><del>S/99.90</del></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <img src="Img/skin1004-ampoule.png" alt="SKIN1004 Ampoule">
+    </div>
+    <div class="card-body">
+      <small class="brand">SKIN1004</small>
+      <h3>Madagascar Centella Ampoule</h3>
+      <div class="tags"><span>Piel sensible</span></div>
+      <div class="price-row"><strong>S/89.90</strong></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <img src="Img/cerave-lotion.png" alt="CeraVe Lotion">
+    </div>
+    <div class="card-body">
+      <small class="brand">CERAVE</small>
+      <h3>Moisturizing Lotion</h3>
+      <div class="tags"><span>Piel seca</span></div>
+      <div class="price-row"><strong>S/89.90</strong></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <img src="Img/garnier-spf.png" alt="Garnier SPF">
+    </div>
+    <div class="card-body">
+      <small class="brand">GARNIER</small>
+      <h3>Super UV Invisible Serum SPF50+</h3>
+      <div class="tags"><span>Piel grasa</span></div>
+      <div class="price-row"><strong>S/72.90</strong></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <img src="Img/lrp-hyalu.png" alt="La Roche-Posay">
+    </div>
+    <div class="card-body">
+      <small class="brand">LA ROCHE-POSAY</small>
+      <h3>Hyalu B5 Serum</h3>
+      <div class="tags"><span>Piel madura</span></div>
+      <div class="price-row"><strong>S/129.90</strong></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <img src="Img/numbuzin-cream.png" alt="Numbuzin Cream">
+    </div>
+    <div class="card-body">
+      <small class="brand">NUMBUZIN</small>
+      <h3>Pink Collagen Gel Cream</h3>
+      <div class="tags"><span>Piel seca</span></div>
+      <div class="price-row"><strong>S/69.90</strong></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <img src="Img/mediheal-tea.png" alt="Mediheal Tea Tree">
+    </div>
+    <div class="card-body">
+      <small class="brand">MEDIHEAL</small>
+      <h3>Tea Tree Care Solution Essential Mask</h3>
+      <div class="tags"><span>Piel grasa</span></div>
+      <div class="price-row"><strong>S/15.90</strong></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <img src="Img/anua-niacin.png" alt="ANUA Niacin Serum">
+    </div>
+    <div class="card-body">
+      <small class="brand">ANUA</small>
+      <h3>Peach 70 Niacin Serum</h3>
+      <div class="tags"><span>Piel mixta</span></div>
+      <div class="price-row"><strong>S/89.90</strong></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="card-image">
+      <img src="Img/isntree-spf.png" alt="Isntree SPF">
+    </div>
+    <div class="card-body">
+      <small class="brand">ISNTREE</small>
+      <h3>Hyaluronic Acid Airy Sun Stick SPF50+</h3>
+      <div class="tags"><span>Todo tipo de piel</span></div>
+      <div class="price-row"><strong>S/69.90</strong></div>
+      <button class="btn-cart">Añadir al carrito</button>
+    </div>
+  </article>
+
+</div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo" style="font-size:19px;">🌸 SEOUL GLOW</div>
+        <p>Lo mejor del skincare coreano para una piel saludable y radiante.</p>
+<div class="socials">
+    <a href="#">
+        <img src="../Img/instagram.png" alt="Instagram">
+    </a>
+
+    <a href="#">
+        <img src="../Img/logotipo-de-twitter.png" alt="Twitter">
+    </a>
+
+    <a href="#">
+        <img src="../Img/facebook (1).png" alt="Facebook">
+    </a>
+</div>
+      </div>
+      <div>
+        <h5>COMPRAR</h5>
+        <ul>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Marcas</a></li>
+          <li><a href="#">Tipos de piel</a></li>
+          <li><a href="#">Ofertas</a></li></ul></div>
+      <div><h5>AYUDA</h5><ul><li><a href="#">Preguntas frecuentes</a></li><li><a href="#">Envíos y devoluciones</a></li><li><a href="#">Métodos de pago</a></li><li><a href="#">Términos y condiciones</a></li>
+        <!-- ===== 5. "Políticas de privacidad" ya no lleva a una página: abre el chatbot ===== -->
+        <li><a href="#" class="privacy-link" onclick="openChat(true);return false;">Políticas de privacidad</a></li>
+      </ul></div>
+      <div><h5>SOBRE NOSOTROS</h5><ul><li><a href="#">Nuestra historia</a></li><li><a href="#">Misión, visión y valores</a></li><li><a href="#">Sostenibilidad</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><h5>MI CUENTA</h5><ul><li><a href="#">Iniciar sesión</a></li><li><a href="#">Mis pedidos</a></li><li><a href="#">Mis favoritos</a></li><li><a href="#">Direcciones</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 Seoul Glow. Todos los derechos reservados.</span>
+      <div class="payment-icons"><span>VISA</span><span>YAPE</span><span>PLIN</span></div>
+    </div>
+  </div>
+</footer>
+<script src="../js/script.js"></script>
 </body>
-</html>
