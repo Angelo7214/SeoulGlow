@@ -39,16 +39,16 @@ setInterval(()=>{
 
 /* ---------- Product "database" ---------- */
 const products=[
-  {brand:'Anua',name:'Heartleaf 77% Soothing Toner',price:79.90,old:99.90,badge:'-20%',rating:4.5,reviews:120},
-  {brand:'COSRX',name:'Advanced Snail 96 Mucin Power Essence',price:89.90,old:105.90,badge:'-15%',rating:4.6,reviews:98},
-  {brand:'Beauty of Joseon',name:'Relief Sun: Rice + Probiotics SPF50+',price:69.90,badge:null,rating:4.7,reviews:210},
-  {brand:'iUNIK',name:'Centella Calming Gel Cream',price:89.90,old:99.90,badge:'-10%',rating:4.5,reviews:76},
-  {brand:'SKIN1004',name:'Madagascar Centella Ampoule',price:89.90,badge:null,rating:4.4,reviews:145},
-];
+  {brand:'Anua',name:'Heartleaf 77% Soothing Toner',price:79.90,old:99.90,badge:'-20%',rating:4.5,reviews:120,img:'../Img/7 Rice Ceramide Hydrating Barrier Serum.png'},
+  {brand:'COSRX',name:'Advanced Snail 96 Mucin Power Essence',price:89.90,old:105.90,badge:'-15%',rating:4.6,reviews:98,img:'../Img/Anua, Heartleaf Quercetinol™ Pore Deep Cleansing Foam.png'},
+  {brand:'Beauty of Joseon',name:'Relief Sun: Rice + Probiotics SPF50+',price:69.90,badge:null,rating:4.7,reviews:210,img:'../Img/BEAUTY OF JOSEON RELIEF SUN  RICE + PROBIOTICS.png'},
+  {brand:'iUNIK',name:'Centella Calming Gel Cream',price:89.90,old:99.90,badge:'-10%',rating:4.5,reviews:76,img:'../Img/Beauty of Joseon, Suero calmante.png'},
+  {brand:'SKIN1004',name:'Madagascar Centella Ampoule',price:89.90,badge:null,rating:4.4,reviews:145,img:'../Img/CREMA COSRX ADVANCE SNAIL.png'},
+];  
 const prodGrid=document.getElementById('prodGrid');
 prodGrid.innerHTML=products.map(p=>`
   <div class="prod-card">
-    <div class="prod-img">${p.badge?`<span class="prod-badge">${p.badge}</span>`:''}<div class="bt"></div></div>
+    <div class="prod-img">${p.badge?`<span class="prod-badge">${p.badge}</span>`:''}<img src="${p.img}" alt="${p.name}"></div>
     <div class="prod-body">
       <div class="prod-brand">${p.brand}</div>
       <div class="prod-name">${p.name}</div>
