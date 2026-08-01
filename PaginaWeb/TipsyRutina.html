@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Soeul</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="site">
+        <div class="header-row">
+            <div class="logo">🌸 SEOUL GLOW<small>Korean Skincare</small></div>
+            <div class="search">
+                <input type="text" placeholder="Buscar productos, marcas o tipos de piel...">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="7" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+            </div>
+            <div class="header-icons">
+                <div class="icon-col">📍<span>Tiendas</span></div>
+                <div class="icon-col">👤<span>Iniciar sesión</span></div>
+                <div class="icon-col">🛍️<span class="cart-badge">0</span><span>Carrito</span></div>
+            </div>
+        </div>
+        <nav class="main">
+            <div class="nav-row">
+                <a href="#">PRODUCTOS ▾</a>
+                <a href="#">MARCAS ▾</a>
+                <a href="#">TIPOS DE PIEL ▾</a>
+                <a href="#">TIPS & RUTINA</a>
+                <!-- ===== 2. Ofertas + Novedades resaltados en un grupo tipo "pill" ===== -->
+                <div class="nav-highlight">
+                    <a href="#" class="on">OFERTAS</a>
+                    <a href="#">NOVEDADES</a>
+                </div>
+                <a href="#" class="nav-tail">SOBRE NOSOTROS</a>
+            </div>
+        </nav>
+    </header>
+
+    <p class="ruta">Inicio / <span>Tips & Rutina</span></p>
+    
+    <section class="tips-banner">
+            <div>
+                <span class="etiqueta">Guía completa de skincare coreano</span>
+                <h1>Aprende, descubre y arma <em>tu rutina perfecta</em> de skincare</h1>
+                <p>Todo lo que necesitas saber sobre tu piel: descubre tu tipo, entiende sus necesidades y arma una rutina coreana paso a paso, con tips de expertos.</p>
+                <div class="botones">
+                    <a href="#paso1" class="cta-btn">Descubre tu tipo de piel</a>
+                    <a href="#paso3" class="btn-outline">Arma tu rutina</a>
+                </div>
+                <div class="cifras">
+                    <div><strong>6</strong><span>Tipos de piel</span></div>
+                    <div><strong>30+</strong><span>Guías y tips</span></div>
+                    <div><strong>6 pasos</strong><span>Rutina coreana</span></div>
+                </div>
+            </div>
+            <div class="foto">
+                <img src="../Img/tips-rutina-banner.png" alt="Rutina de skincare coreano">
+            </div>
+        </section>
+ 
+
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <div class="logo" style="font-size:19px;">🌸 SEOUL GLOW</div>
+                    <p>Lo mejor del skincare coreano para una piel saludable y radiante.</p>
+                    <div class="socials">
+                        <a href="#">
+                            <img src="../Img/instagram.png" alt="Instagram">
+                        </a>
+
+                        <a href="#">
+                            <img src="../Img/logotipo-de-twitter.png" alt="Twitter">
+                        </a>
+
+                        <a href="#">
+                            <img src="../Img/facebook (1).png" alt="Facebook">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5>COMPRAR</h5>
+                    <ul>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Marcas</a></li>
+                        <li><a href="#">Tipos de piel</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>AYUDA</h5>
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Envíos y devoluciones</a></li>
+                        <li><a href="#">Métodos de pago</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <!-- ===== 5. "Políticas de privacidad" ya no lleva a una página: abre el chatbot ===== -->
+                        <li><a href="#" class="privacy-link" onclick="openChat(true);return false;">Políticas de
+                                privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>SOBRE NOSOTROS</h5>
+                    <ul>
+                        <li><a href="#">Nuestra historia</a></li>
+                        <li><a href="#">Misión, visión y valores</a></li>
+                        <li><a href="#">Sostenibilidad</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>MI CUENTA</h5>
+                    <ul>
+                        <li><a href="#">Iniciar sesión</a></li>
+                        <li><a href="#">Mis pedidos</a></li>
+                        <li><a href="#">Mis favoritos</a></li>
+                        <li><a href="#">Direcciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© 2024 Seoul Glow. Todos los derechos reservados.</span>
+                <div class="payment-icons"><span>VISA</span><span>YAPE</span><span>PLIN</span></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
