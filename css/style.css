@@ -50,6 +50,7 @@
 
 /* Imagen del carrito */
 .icono-carrito{width:28px;height:28px;object-fit:contain;margin-top:4px;margin-bottom:2px;}
+.icono-header{width:22px;height:22px;object-fit:contain;margin-top:4px;margin-bottom:2px;}
 /* Número del carrito */
 .cart-badge{position:absolute;top:-6px;right:-6px;background:var(--rose-700);color:#fff;
     font-size:10px;font-weight:bold;border-radius:50%;width:16px;height:16px;
@@ -175,8 +176,8 @@
   .socials{display:flex;gap:10px;margin-top:14px;}
   .socials a{width:32px;height:32px;border-radius:50%;background:var(--pink-50);display:flex;align-items:center;justify-content:center;color:var(--rose-700);}
   .foot-bottom{border-top:1px solid #f4e6ec;margin-top:30px;padding-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);}
-  .payment-icons{display:flex;gap:8px;}
-  .payment-icons span{border:1px solid #eee;border-radius:5px;padding:4px 8px;font-size:10px;font-weight:800;color:#777;}
+  .payment-icons{display:flex;gap:8px;align-items:center;}
+  .payment-icons img{height:20px;width:auto;object-fit:contain;border:1px solid #eee;border-radius:5px;padding:4px 8px;background:#fff;}
 
   /* privacy → chatbot trigger */
   .privacy-link{position:relative;}
