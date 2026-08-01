@@ -153,3 +153,97 @@ if (tabBtns.length) {
   targets.forEach(el=>aboutSpy.observe(el));
   setActiveTab('historia');
 }
+/* ============================================================
+   MI CUENTA
+   ============================================================ */
+
+/* ---------- Sidebar tabs ---------- */
+const accountNav = document.getElementById('accountNav');
+if (accountNav) {
+  const navItems = accountNav.querySelectorAll('.account-nav-item[data-panel]');
+  const panels = document.querySelectorAll('.account-tabpanel');
+
+  function showAccountPanel(name){
+    panels.forEach(p => p.classList.toggle('on', p.dataset.panel === name));
+    navItems.forEach(b => b.classList.toggle('on', b.dataset.panel === name));
+  }
+
+  navItems.forEach(btn=>{
+    btn.addEventListener('click', ()=> showAccountPanel(btn.dataset.panel));
+  });
+}
+
+/* ---------- Modales (Registro / Agregar dirección) ---------- */
+function openModal(id){
+  const modal = document.getElementById(id);
+  if (modal) modal.classList.add('open');
+}
+function closeModal(modalEl){
+  if (modalEl) modalEl.classList.remove('open');
+}
+
+document.querySelectorAll('[data-modal]').forEach(trigger=>{
+  trigger.addEventListener('click', (e)=>{
+    e.preventDefault();
+    openModal(trigger.dataset.modal);
+  });
+});
+
+document.querySelectorAll('.modal-overlay').forEach(overlay=>{
+  overlay.addEventListener('click', (e)=>{
+    if (e.target === overlay) closeModal(overlay);
+  });
+  const closeBtn = overlay.querySelector('[data-close-modal]');
+  if (closeBtn) closeBtn.addEventListener('click', ()=> closeModal(overlay));
+});
+
+document.addEventListener('keydown', (e)=>{
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(closeModal);
+  }
+});
+
+const switchToLogin = document.getElementById('switchToLogin');
+if (switchToLogin) {
+  switchToLogin.addEventListener('click', (e)=>{
+    e.preventDefault();
+    closeModal(document.getElementById('registerModal'));
+    if (accountNav) {
+      const loginBtn = accountNav.querySelector('[data-panel="login"]');
+      if (loginBtn) loginBtn.click();
+    }
+  });
+}
+
+/* ---------- Mis favoritos (datos de ejemplo) ---------- */
+const favoritesGrid = document.getElementById('favoritesGrid');
+if (favoritesGrid) {
+  const favorites = [
+    {brand:'Anua',name:'Heartleaf 77% Soothing Toner',price:79.90,old:99.90,img:'../Img/7 Rice Ceramide Hydrating Barrier Serum.png'},
+    {brand:'COSRX',name:'Advanced Snail 96 Mucin Power Essence',price:89.90,old:105.90,img:'../Img/Anua, Heartleaf Quercetinol™ Pore Deep Cleansing Foam.png'},
+    {brand:'Beauty of Joseon',name:'Relief Sun: Rice + Probiotics SPF50+',price:69.90,img:'../Img/BEAUTY OF JOSEON RELIEF SUN  RICE + PROBIOTICS.png'},
+    {brand:'iUNIK',name:'Centella Calming Gel Cream',price:89.90,old:99.90,img:'../Img/Beauty of Joseon, Suero calmante.png'},
+  ];
+  function renderFavorites(){
+    favoritesGrid.innerHTML = favorites.map((p,i)=>`
+      <div class="prod-card">
+        <button class="prod-remove" data-idx="${i}" title="Quitar de favoritos">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.2-4.4-9.5-8.6C1 9 2.4 5.5 6 5.5c2 0 3.5 1.2 6 3 2.5-1.8 4-3 6-3 3.6 0 5 3.5 3.5 6.9C19.2 16.6 12 21 12 21z"/></svg>
+        </button>
+        <div class="prod-img"><img src="${p.img}" alt="${p.name}"></div>
+        <div class="prod-body">
+          <div class="prod-brand">${p.brand}</div>
+          <div class="prod-name">${p.name}</div>
+          <div class="prod-price">S/ ${p.price.toFixed(2)}${p.old?`<del>S/ ${p.old.toFixed(2)}</del>`:''}</div>
+        </div>
+      </div>`).join('');
+
+    favoritesGrid.querySelectorAll('.prod-remove').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        favorites.splice(Number(btn.dataset.idx), 1);
+        renderFavorites();
+      });
+    });
+  }
+  renderFavorites();
+}

@@ -682,3 +682,155 @@
   .timeline-year{display:none;}
   .timeline-item{gap:0;}
 }
+/* ============================================================
+   MI CUENTA
+   ============================================================ */
+
+/* ---------- Banner superior ---------- */
+.account-banner{
+  background:linear-gradient(120deg,var(--pink-100),var(--pink-50));
+  text-align:center;
+  padding:40px 0;
+}
+.account-banner h1{margin:0 0 8px;font-size:28px;color:var(--plum-900);}
+.account-banner p{margin:0;color:var(--muted);font-size:14.5px;}
+
+/* ---------- Layout de dos columnas ---------- */
+.account-layout{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:26px;
+  margin:36px 0 0;
+}
+
+/* ---------- Sidebar / menú de cuenta ---------- */
+.account-sidebar{
+  background:#fff;
+  border:1px solid #f4e6ec;
+  border-radius:18px;
+  padding:10px;
+  height:max-content;
+  position:sticky;
+  top:90px;
+}
+.account-nav{display:flex;flex-direction:column;gap:2px;}
+.account-nav-item{
+  display:flex;align-items:center;gap:10px;
+  width:100%;text-align:left;background:none;
+  padding:12px 14px;border-radius:12px;
+  font-size:14px;font-weight:700;color:var(--ink);
+  transition:background .2s,color .2s;
+}
+.account-nav-item svg{width:18px;height:18px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:1.8;}
+.account-nav-item:hover{background:var(--pink-50);}
+.account-nav-item.on{background:var(--pink-50);color:var(--rose-700);}
+
+/* ---------- Panel principal ---------- */
+.account-panel{
+  background:#fff;
+  border:1px solid #f4e6ec;
+  border-radius:20px;
+  padding:34px;
+}
+.account-tabpanel{display:none;}
+.account-tabpanel.on{display:block;}
+.account-tabpanel h2{margin:0 0 4px;font-size:20px;color:var(--plum-900);}
+.account-tabpanel > .hint{margin:0 0 26px;color:var(--muted);font-size:13.5px;}
+
+/* ---------- Formularios (login / registro / dirección) ---------- */
+.form-group{margin-bottom:18px;max-width:420px;}
+.form-group label{display:block;font-size:13px;font-weight:700;color:var(--plum-900);margin-bottom:7px;}
+.form-group input{
+  width:100%;padding:12px 14px;border-radius:12px;
+  border:1.5px solid #f2dbe4;background:var(--pink-50);
+  font-size:13.5px;font-family:inherit;outline:none;transition:border-color .2s;
+}
+.form-group input:focus{border-color:var(--pink-500);}
+.form-row{display:flex;justify-content:space-between;align-items:center;margin:-8px 0 20px;max-width:420px;}
+.form-check{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);}
+.form-check input{accent-color:var(--rose-700);}
+.form-row a{font-size:13px;font-weight:700;color:var(--rose-700);}
+.form-row a:hover{text-decoration:underline;}
+
+.cta-btn.block{width:100%;max-width:420px;justify-content:center;}
+.form-footnote{margin:18px 0 0;font-size:13.5px;color:var(--muted);}
+.form-footnote a{color:var(--rose-700);font-weight:700;}
+.form-footnote a:hover{text-decoration:underline;}
+
+/* ---------- Mis pedidos ---------- */
+.order-item{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  background:var(--pink-50);border:1px solid var(--pink-100);
+  border-radius:15px;padding:18px 20px;margin-bottom:16px;
+}
+.order-item:last-child{margin-bottom:0;}
+.order-item .order-info strong{display:block;font-size:14px;color:var(--plum-900);margin-bottom:3px;}
+.order-item .order-info span{font-size:12.5px;color:var(--muted);}
+.order-status{font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;white-space:nowrap;}
+.order-status.entregado{background:#e7f4ec;color:var(--icon-green,#4a9b6e);}
+.order-status.camino{background:#e8f0fa;color:var(--icon-blue,#3b7bc4);}
+.order-status.procesando{background:var(--icon-gold-bg,#faf1de);color:var(--gold);}
+.order-total{font-weight:800;color:var(--rose-700);font-size:15px;white-space:nowrap;}
+
+/* ---------- Mis favoritos (reusa .prod-card, agrega botón quitar) ---------- */
+.favorites-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.prod-card{position:relative;}
+.prod-remove{
+  position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;
+  background:#fff;color:var(--rose-700);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 14px -6px rgba(0,0,0,.25);z-index:2;
+}
+.prod-remove svg{width:15px;height:15px;}
+
+/* ---------- Direcciones ---------- */
+.address-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px;}
+.address-card{
+  border:1px solid #f6e6ec;border-radius:16px;padding:18px;position:relative;
+}
+.address-card .badge{
+  position:absolute;top:14px;right:14px;background:var(--pink-50);color:var(--rose-700);
+  font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:999px;
+}
+.address-card h4{margin:0 0 6px;font-size:14.5px;color:var(--plum-900);}
+.address-card p{margin:0 0 12px;font-size:13px;color:var(--muted);line-height:1.5;}
+.address-card .address-actions{display:flex;gap:14px;font-size:12.5px;font-weight:700;}
+.address-card .address-actions a{color:var(--rose-700);}
+.address-card .address-actions a:hover{text-decoration:underline;}
+.address-add-btn{
+  border:1.5px dashed var(--pink-100);border-radius:16px;background:var(--pink-50);
+  color:var(--rose-700);font-weight:700;font-size:13.5px;padding:16px;width:100%;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+
+/* ---------- Modales (Registro / Agregar dirección) ---------- */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(43,31,40,.5);
+  display:none;align-items:center;justify-content:center;padding:20px;z-index:200;
+}
+.modal-overlay.open{display:flex;}
+.modal-card{
+  background:#fff;border-radius:22px;padding:34px;max-width:440px;width:100%;
+  max-height:88vh;overflow-y:auto;position:relative;box-shadow:0 30px 60px -12px rgba(0,0,0,.35);
+}
+.modal-close{
+  position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;
+  background:var(--pink-50);color:var(--rose-700);font-size:18px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+}
+.modal-card h2{margin:0 0 4px;font-size:20px;color:var(--plum-900);}
+.modal-card > .hint{margin:0 0 24px;color:var(--muted);font-size:13.5px;}
+.modal-card .form-group,
+.modal-card .form-row,
+.modal-card .cta-btn.block{max-width:none;}
+
+@media(max-width:1024px){
+  .account-layout{grid-template-columns:1fr;}
+  .account-sidebar{position:static;}
+  .account-nav{flex-direction:row;overflow-x:auto;}
+  .favorites-grid{grid-template-columns:repeat(2,1fr);}
+  .address-grid{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  .favorites-grid{grid-template-columns:1fr;}
+  .order-item{flex-direction:column;align-items:flex-start;}
+}

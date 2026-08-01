@@ -61,25 +61,209 @@
   </nav>
 </header>
 
+<div class="wrap">
+  <div class="breadcrumb"><a href="/">Inicio</a> / Mi cuenta</div>
+</div>
 
+<div class="account-banner">
+  <div class="wrap">
+    <h1>Mi cuenta</h1>
+    <p>Gestiona tus datos, pedidos y preferencias en un solo lugar.</p>
+  </div>
+</div>
 
+<div class="wrap">
+  <div class="account-layout">
 
+    <!-- SIDEBAR -->
+    <aside class="account-sidebar">
+      <nav class="account-nav" id="accountNav">
+        <button class="account-nav-item on" data-panel="login">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg>
+          Iniciar sesión
+        </button>
+        <button class="account-nav-item" data-modal="registerModal">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 20c0-4 3.2-6 7-6s5.5 1.1 6.4 2.9"/><path d="M18 8v6M15 11h6"/></svg>
+          Registro
+        </button>
+        <button class="account-nav-item" data-panel="orders">
+          <svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+          Mis pedidos
+        </button>
+        <button class="account-nav-item" data-panel="favorites">
+          <svg viewBox="0 0 24 24"><path d="M12 20s-7.2-4.4-9.5-8.6C1 8 2.4 4.5 6 4.5c2 0 3.5 1.2 6 3 2.5-1.8 4-3 6-3 3.6 0 5 3.5 3.5 6.9C19.2 15.6 12 20 12 20z"/></svg>
+          Mis favoritos
+        </button>
+        <button class="account-nav-item" data-panel="addresses">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.3"/></svg>
+          Direcciones
+        </button>
+      </nav>
+    </aside>
 
+    <!-- PANEL PRINCIPAL -->
+    <div class="account-panel">
 
+      <!-- Iniciar sesión -->
+      <div class="account-tabpanel on" data-panel="login">
+        <h2>Iniciar sesión</h2>
+        <p class="hint">Ingresa a tu cuenta para ver tus pedidos y favoritos.</p>
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label for="loginEmail">Correo electrónico</label>
+            <input type="email" id="loginEmail" placeholder="nombre@correo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPass">Contraseña</label>
+            <input type="password" id="loginPass" placeholder="········" required>
+          </div>
+          <div class="form-row">
+            <label class="form-check"><input type="checkbox"> Recordarme</label>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+          <button type="submit" class="cta-btn block">Ingresar</button>
+          <p class="form-footnote">¿Aún no tienes cuenta? <a href="#" data-modal="registerModal">Regístrate aquí</a></p>
+        </form>
+      </div>
 
+      <!-- Mis pedidos -->
+      <div class="account-tabpanel" data-panel="orders">
+        <h2>Mis pedidos</h2>
+        <p class="hint">Revisa el estado de tus compras recientes.</p>
 
+        <div class="order-item">
+          <div class="order-info">
+            <strong>Pedido #SG-10482</strong>
+            <span>3 productos · 24 jul. 2026</span>
+          </div>
+          <span class="order-status entregado">Entregado</span>
+          <span class="order-total">S/ 189.70</span>
+          <a href="#" class="btn-outline" style="padding:9px 18px;font-size:12.5px;">Ver detalle</a>
+        </div>
 
+        <div class="order-item">
+          <div class="order-info">
+            <strong>Pedido #SG-10501</strong>
+            <span>2 productos · 29 jul. 2026</span>
+          </div>
+          <span class="order-status camino">En camino</span>
+          <span class="order-total">S/ 149.80</span>
+          <a href="#" class="btn-outline" style="padding:9px 18px;font-size:12.5px;">Ver detalle</a>
+        </div>
 
+        <div class="order-item">
+          <div class="order-info">
+            <strong>Pedido #SG-10515</strong>
+            <span>1 producto · 1 ago. 2026</span>
+          </div>
+          <span class="order-status procesando">Procesando</span>
+          <span class="order-total">S/ 79.90</span>
+          <a href="#" class="btn-outline" style="padding:9px 18px;font-size:12.5px;">Ver detalle</a>
+        </div>
+      </div>
 
+      <!-- Mis favoritos -->
+      <div class="account-tabpanel" data-panel="favorites">
+        <h2>Mis favoritos</h2>
+        <p class="hint">Productos que guardaste para más tarde.</p>
+        <div class="favorites-grid" id="favoritesGrid"></div>
+      </div>
 
+      <!-- Direcciones -->
+      <div class="account-tabpanel" data-panel="addresses">
+        <h2>Direcciones</h2>
+        <p class="hint">Administra dónde recibes tus pedidos.</p>
 
+        <div class="address-grid">
+          <div class="address-card">
+            <span class="badge">Predeterminada</span>
+            <h4>Casa</h4>
+            <p>Av. Los Jazmines 452, San Isidro, Lima</p>
+            <div class="address-actions"><a href="#">Editar</a><a href="#">Eliminar</a></div>
+          </div>
+          <div class="address-card">
+            <h4>Oficina</h4>
+            <p>Calle Las Begonias 310, San Isidro, Lima</p>
+            <div class="address-actions"><a href="#">Editar</a><a href="#">Eliminar</a></div>
+          </div>
+        </div>
 
+        <button class="address-add-btn" data-modal="addressModal">+ Agregar nueva dirección</button>
+      </div>
 
+    </div>
+  </div>
+</div>
 
+<!-- Newsletter (reutiliza tu componente ya existente) -->
+<div class="wrap" style="margin-top:44px;">
+  <div class="about-newsletter">
+    <div>
+      <strong>¡Únete a Seoul Glow!</strong>
+      <p>Recibe novedades, ofertas exclusivas y tips para tu piel.</p>
+    </div>
+    <form onsubmit="return false;">
+      <input type="email" placeholder="Ingresa tu correo electrónico" required>
+      <button type="submit">Suscribirme</button>
+    </form>
+  </div>
+</div>
 
+<!-- MODAL: Registro -->
+<div class="modal-overlay" id="registerModal">
+  <div class="modal-card">
+    <button class="modal-close" data-close-modal>×</button>
+    <h2>Crea tu cuenta</h2>
+    <p class="hint">Regístrate para guardar tus pedidos, direcciones y favoritos.</p>
+    <form onsubmit="return false;">
+      <div class="form-group">
+        <label for="regName">Nombre completo</label>
+        <input type="text" id="regName" placeholder="Tu nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="regEmail">Correo electrónico</label>
+        <input type="email" id="regEmail" placeholder="nombre@correo.com" required>
+      </div>
+      <div class="form-group">
+        <label for="regPass">Contraseña</label>
+        <input type="password" id="regPass" placeholder="········" required>
+      </div>
+      <div class="form-group">
+        <label for="regPass2">Confirmar contraseña</label>
+        <input type="password" id="regPass2" placeholder="········" required>
+      </div>
+      <div class="form-row" style="margin-bottom:22px;">
+        <label class="form-check"><input type="checkbox" required> Acepto los términos y la política de privacidad</label>
+      </div>
+      <button type="submit" class="cta-btn block">Crear cuenta</button>
+      <p class="form-footnote">¿Ya tienes cuenta? <a href="#" id="switchToLogin">Inicia sesión aquí</a></p>
+    </form>
+  </div>
+</div>
 
-
-
+<!-- MODAL: Agregar dirección -->
+<div class="modal-overlay" id="addressModal">
+  <div class="modal-card">
+    <button class="modal-close" data-close-modal>×</button>
+    <h2>Nueva dirección</h2>
+    <p class="hint">Guárdala para tus próximos pedidos.</p>
+    <form onsubmit="return false;">
+      <div class="form-group">
+        <label for="addrLabel">Nombre de la dirección</label>
+        <input type="text" id="addrLabel" placeholder="Ej. Casa, Oficina" required>
+      </div>
+      <div class="form-group">
+        <label for="addrLine">Dirección</label>
+        <input type="text" id="addrLine" placeholder="Av., calle, número, distrito" required>
+      </div>
+      <div class="form-group">
+        <label for="addrPhone">Teléfono de contacto</label>
+        <input type="tel" id="addrPhone" placeholder="9xx xxx xxx" required>
+      </div>
+      <button type="submit" class="cta-btn block">Guardar dirección</button>
+    </form>
+  </div>
+</div>
 
 <footer>
   <div class="wrap">
