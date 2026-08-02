@@ -237,22 +237,7 @@
         );
     pointer-events:none;
 }
-
-/* Flor decorativa */
-
-.hero-art::before{
-    content:"✿";
-    position:absolute;
-    font-size:150px;
-    line-height:1;
-    color:rgba(255,255,255,.28);
-    top:-28px;
-    right:-15px;
-    transform:rotate(12deg);
-}
-
 /* Si el hero utiliza una imagen */
-
 .hero-art img{
     width:100%;
     height:100%;
@@ -268,27 +253,54 @@
 .hero-art:hover img{
     transform:scale(1.035);
 }
+/* ---------- Flechas ---------- */
+/* ---------- Contenido del Hero ---------- */
 
-/* ---------- Productos decorativos del hero ---------- */
+.hero-content{
+    position:relative;
+    z-index:3;
+}
 
-.hero-bottles{
-    display:flex;
-    align-items:flex-end;
-    gap:10px;
-    padding-bottom:18px;
+
+/* ---------- Imagen del Hero ---------- */
+
+.hero-art img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
     position:relative;
     z-index:2;
+    transition:transform .8s ease;
 }
 
-.bottle{
-    width:30px;
-    border-radius:8px 8px 3px 3px;
-    background:#fff;
-    box-shadow:0 8px 18px -6px rgba(0,0,0,.25);
+.hero-art:hover img{
+    transform:scale(1.035);
 }
 
-/* ---------- Flechas ---------- */
 
+/* ---------- Decoraciones ---------- */
+
+.hero-decor{
+    position:absolute;
+    z-index:3;
+    color:rgba(255,255,255,.75);
+    pointer-events:none;
+}
+
+.hero-decor-1{
+    font-size:90px;
+    top:-25px;
+    right:-10px;
+    transform:rotate(15deg);
+}
+
+.hero-decor-2{
+    font-size:28px;
+    bottom:25px;
+    left:25px;
+    opacity:.7;
+}
 .hero-nav{
     position:absolute;
     top:50%;
