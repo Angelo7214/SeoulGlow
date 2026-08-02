@@ -954,9 +954,19 @@
 .reseñas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;}
 .reseñas-card{background:#fff;border:1px solid #f6e6ec;border-radius:16px;padding:20px;}
 
-.reseñas-top{display:flex;align-items:center;gap:16px;margin-bottom:14px;}
-.icono{width:104px;height:88px;border-radius:50%;flex-shrink:0;overflow:hidden;background:var(--pink-50);}
-.icono img{width:100%;height:100%;object-fit:cover;display:block;}
+.reseñas-top{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.icono{
+    width:52px;height:52px;
+    border-radius:50%;
+    flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+}
+.icono.dorado{background:var(--gold);}
+.icono.verde{background:var(--icon-green);}
+.icono.azul{background:var(--icon-blue);}
+.icono.morado{background:var(--icon-purple);}
+.icono.rojo{background:var(--icon-red);}
+.icono.verdeazulado{background:var(--icon-teal);}
 
 .reseñas-nombre{font-family:'Fraunces',serif;font-weight:600;font-size:16px;color:var(--plum-900);margin-bottom:3px;}
 .reseñas-top span{display:block;font-size:12px;font-weight:700;color:var(--rose-700);}
