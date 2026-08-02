@@ -997,3 +997,57 @@
     padding:48px 24px;
     max-width:900px;
 }
+
+/* ---------- Sección - Paso 5 ---------- */
+
+#paso5{
+    background-image:linear-gradient(rgba(255,250,249,.55), rgba(255,250,249,.55)), url(../Img/paso5-fondo.png);
+    background-size:cover;
+    background-position:center;
+}
+
+.tips-filtros{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
+.tips-filtros a{font-size:12.5px;font-weight:700;padding:9px 18px;border-radius:999px;border:1.5px solid var(--pink-100);background:#fff;color:var(--rose-700);}
+.tips-filtros a.activo{background:var(--rose-700);color:#fff;border-color:var(--rose-700);}
+
+.tips-lista{display:flex;flex-direction:column;gap:14px;}
+.tips-item{
+    display:flex;align-items:center;gap:18px;
+    background:#fff;border-radius:16px;padding:16px 20px;
+    border-left:5px solid transparent;
+    box-shadow:0 6px 16px -10px rgba(43,31,40,.15);
+    transition:transform .2s,box-shadow .2s;
+}
+.tips-item:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+
+.tips-item.rojo{border-left-color:var(--icon-red,#d94545);}
+.tips-item.naranja{border-left-color:#e8944f;}
+.tips-item.rosa{border-left-color:var(--rose-700);}
+.tips-item.amarillo{border-left-color:var(--gold);}
+.tips-item.morado{border-left-color:var(--icon-purple,#8b5fbf);}
+.tips-item.verde{border-left-color:var(--icon-teal,#3b9c9c);}
+
+.tips-num{font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:var(--pink-100);width:36px;flex-shrink:0;text-align:center;}
+
+.tips-img{width:158px;height: 98px;border-radius:12px;overflow:hidden;flex-shrink:0;background:var(--pink-50);}
+.tips-img img{width:100%;height:100%;object-fit:cover;display:block;}
+
+.tips-contenido{flex:1;min-width:0;}
+.tips-etiqueta{display:block;font-size:10.5px;font-weight:800;color:var(--rose-700);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px;}
+.tips-contenido h3{margin:0 0 4px;font-size:15px;color:var(--plum-900);}
+.tips-contenido p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.5;}
+
+.tips-tiempo{display:flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted);white-space:nowrap;flex-shrink:0;}
+
+.tips-flecha{
+    width:38px;height:38px;border-radius:50%;flex-shrink:0;
+    background:var(--pink-50);color:var(--rose-700);
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;transition:background .2s,color .2s;
+}
+.tips-item:hover .tips-flecha{background:var(--rose-700);color:#fff;}
+
+@media(max-width:900px){
+    .tips-item{flex-wrap:wrap;}
+    .tips-tiempo{order:5;margin-left:54px;}
+}
