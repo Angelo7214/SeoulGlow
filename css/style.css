@@ -949,16 +949,18 @@
 .circulo-piel img{width:100%;height:100%;object-fit:cover;}
 .piel-card span{font-weight:700;font-size:13.5px;}
 
-/* ---------- Sección - Paso 2 ---------- */
+/* ---------- Sección - Paso 2 Y 4 ---------- */
 
 .reseñas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;}
 .reseñas-card{background:#fff;border:1px solid #f6e6ec;border-radius:16px;padding:20px;}
-.reseñas-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;}
-.reseñas-top .avatar{width:34px;height:34px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.reseñas-top .avatar img{width:60%;}
-.reseñas-nombre{font-weight:700;font-size:13.5px;}
-.reseñas-top span{font-size:11px;font-weight:700;color:var(--rose-700);}
-.reseñas-texto{font-size:13px;color:#5f5560;line-height:1.5;margin:0 0 10px;}
+
+.reseñas-top{display:flex;align-items:center;gap:16px;margin-bottom:14px;}
+.icono{width:104px;height:88px;border-radius:50%;flex-shrink:0;overflow:hidden;background:var(--pink-50);}
+.icono img{width:100%;height:100%;object-fit:cover;display:block;}
+
+.reseñas-nombre{font-family:'Fraunces',serif;font-weight:600;font-size:16px;color:var(--plum-900);margin-bottom:3px;}
+.reseñas-top span{display:block;font-size:12px;font-weight:700;color:var(--rose-700);}
+.reseñas-texto{font-size:13.5px;color:#5f5560;line-height:1.6;margin:0 0 10px;}
 .ver{font-size:12.5px;font-weight:700;color:var(--rose-700);}
 
 /* ---------- Sección - Paso 3 ---------- */
