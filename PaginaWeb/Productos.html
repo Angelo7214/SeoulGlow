@@ -85,7 +85,7 @@
     </div>
   </div>
 
-  <div class="catalog-layout">
+<div class="catalog-layout">
 
     <!-- Sidebar filtros -->
     <aside class="catalog-sidebar">
@@ -93,214 +93,56 @@
 
       <div class="filter-group">
         <h4>Tipo de piel</h4>
-        <label><input type="checkbox"> Piel seca</label>
-        <label><input type="checkbox"> Piel grasa</label>
-        <label><input type="checkbox"> Piel mixta</label>
-        <label><input type="checkbox"> Piel sensible</label>
+        <label><input type="checkbox" class="filtro-piel" value="normal"> Piel normal</label>
+        <label><input type="checkbox" class="filtro-piel" value="seca"> Piel seca</label>
+        <label><input type="checkbox" class="filtro-piel" value="grasa"> Piel grasa</label>
+        <label><input type="checkbox" class="filtro-piel" value="mixta"> Piel mixta</label>
+        <label><input type="checkbox" class="filtro-piel" value="sensible"> Piel sensible</label>
+        <label><input type="checkbox" class="filtro-piel" value="madura"> Piel madura</label>
       </div>
 
       <div class="filter-group">
         <h4>Categoría</h4>
-        <label><input type="checkbox"> Limpiadores</label>
-        <label><input type="checkbox"> Sérums</label>
-        <label><input type="checkbox"> Protectores solares</label>
-        <label><input type="checkbox"> Cremas hidratantes</label>
+        <label><input type="checkbox" class="filtro-categoria" value="limpiadores"> Limpiadores</label>
+        <label><input type="checkbox" class="filtro-categoria" value="tonicos"> Tónicos</label>
+        <label><input type="checkbox" class="filtro-categoria" value="serums"> Sérums</label>
+        <label><input type="checkbox" class="filtro-categoria" value="contorno"> Contorno de ojos</label>
+        <label><input type="checkbox" class="filtro-categoria" value="protectores"> Protectores solares</label>
+        <label><input type="checkbox" class="filtro-categoria" value="cremas"> Cremas hidratantes</label>
       </div>
 
       <div class="filter-group">
         <h4>Rango de precio</h4>
-        <input type="range" min="0" max="300">
+        <input type="range" id="priceRange" min="0" max="300" value="300">
         <div class="price-range">
           <span>S/0</span>
-          <span>S/300+</span>
+          <span id="priceRangeMax">S/300+</span>
         </div>
       </div>
 
-      <button class="btn-apply">Aplicar filtros</button>
+      <button class="btn-apply" id="applyFiltersBtn">Aplicar filtros</button>
     </aside>
 
     <!-- Productos -->
     <div class="catalog-content">
-
       <div class="catalog-toolbar">
         <div class="toolbar-left">
           <label>Ordenar por:</label>
-          <select>
-            <option>Más vendidos</option>
-            <option>Precio: menor a mayor</option>
-            <option>Precio: mayor a menor</option>
-            <option>Novedades</option>
+          <select id="sortSelect">
+            <option value="vendidos">Más vendidos</option>
+            <option value="menor">Precio: menor a mayor</option>
+            <option value="mayor">Precio: mayor a menor</option>
+            <option value="novedades">Novedades</option>
           </select>
         </div>
-
-        <div class="toolbar-right">
-          Mostrando 1–12 de 126 productos
-        </div>
+        <div class="toolbar-right" id="resultsCount">Mostrando 1–12 de 12 productos</div>
       </div>
 
-      <div class="catalog-grid">
+      <div class="catalog-grid" id="catalogGrid"></div>
+    </div>
 
-  <article class="catalog-card">
-    <div class="card-image">
-      <span class="discount">-20%</span>
-      <img src="../Img/7 Rice Ceramide Hydrating Barrier Serum.png" alt="ANUA Toner">
-    </div>
-    <div class="card-body">
-      <small class="brand">ANUA</small>
-      <h3>Heartleaf 77% Soothing Toner</h3>
-      <div class="tags"><span>Piel sensible</span></div>
-      <div class="price-row"><strong>S/79.90</strong><del>S/99.90</del></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
+  </div>
 
-  <article class="catalog-card">
-    <div class="card-image">
-      <span class="discount">-15%</span>
-      <img src="../Img/Anua, Heartleaf Quercetinol™ Pore Deep Cleansing Foam.png" alt="COSRX Serum">
-    </div>
-    <div class="card-body">
-      <small class="brand">COSRX</small>
-      <h3>Advanced Snail 96 Mucin Power Essence</h3>
-      <div class="tags"><span>Todo tipo de piel</span></div>
-      <div class="price-row"><strong>S/89.90</strong><del>S/105.90</del></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <span class="discount">NUEVO</span>
-      <img src="../Img/BEAUTY OF JOSEON RELIEF SUN  RICE + PROBIOTICS.png" alt="Beauty of Joseon">
-    </div>
-    <div class="card-body">
-      <small class="brand">BEAUTY OF JOSEON</small>
-      <h3>Relief Sun SPF50+ Rice + Probiotics</h3>
-      <div class="tags"><span>Piel mixta</span></div>
-      <div class="price-row"><strong>S/69.90</strong></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <span class="discount">-10%</span>
-      <img src="../Img/Beauty of Joseon, Suero calmante.png" alt="Isntree Gel Cream">
-    </div>
-    <div class="card-body">
-      <small class="brand">ISNTREE</small>
-      <h3>Centella Calming Gel Cream</h3>
-      <div class="tags"><span>Piel grasa</span></div>
-      <div class="price-row"><strong>S/89.90</strong><del>S/99.90</del></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <img src="../Img/CREMA COSRX ADVANCE SNAIL.png" alt="SKIN1004 Ampoule">
-    </div>
-    <div class="card-body">
-      <small class="brand">SKIN1004</small>
-      <h3>Madagascar Centella Ampoule</h3>
-      <div class="tags"><span>Piel sensible</span></div>
-      <div class="price-row"><strong>S/89.90</strong></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <img src="../Img/Dynasty Cream.png" alt="CeraVe Lotion">
-    </div>
-    <div class="card-body">
-      <small class="brand">CERAVE</small>
-      <h3>Moisturizing Lotion</h3>
-      <div class="tags"><span>Piel seca</span></div>
-      <div class="price-row"><strong>S/89.90</strong></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <img src="../Img/Espuma Limpiadora Madagascar Centella Poremizing Deep Cleansing Foam.png" alt="Garnier SPF">
-    </div>
-    <div class="card-body">
-      <small class="brand">GARNIER</small>
-      <h3>Super UV Invisible Serum SPF50+</h3>
-      <div class="tags"><span>Piel grasa</span></div>
-      <div class="price-row"><strong>S/72.90</strong></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <img src="../Img/Full Fit Propolis Synergy Toner.png" alt="La Roche-Posay">
-    </div>
-    <div class="card-body">
-      <small class="brand">LA ROCHE-POSAY</small>
-      <h3>Hyalu B5 Serum</h3>
-      <div class="tags"><span>Piel madura</span></div>
-      <div class="price-row"><strong>S/129.90</strong></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <img src="../Img/Limpiador Facial En Gel Cosrx Advanced Snail Mucin Gel Cleanser.png" alt="Numbuzin Cream">
-    </div>
-    <div class="card-body">
-      <small class="brand">NUMBUZIN</small>
-      <h3>Pink Collagen Gel Cream</h3>
-      <div class="tags"><span>Piel seca</span></div>
-      <div class="price-row"><strong>S/69.90</strong></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <img src="../Img/Madagascar Centella Tone Brightening Ampolla de cápsulas.png" alt="Mediheal Tea Tree">
-    </div>
-    <div class="card-body">
-      <small class="brand">MEDIHEAL</small>
-      <h3>Tea Tree Care Solution Essential Mask</h3>
-      <div class="tags"><span>Piel grasa</span></div>
-      <div class="price-row"><strong>S/15.90</strong></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <img src="../Img/Madagascar Centella, Hyalu-Cica Brightening Toner.png" alt="ANUA Niacin Serum">
-    </div>
-    <div class="card-body">
-      <small class="brand">ANUA</small>
-      <h3>Peach 70 Niacin Serum</h3>
-      <div class="tags"><span>Piel mixta</span></div>
-      <div class="price-row"><strong>S/89.90</strong></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-  <article class="catalog-card">
-    <div class="card-image">
-      <img src="../Img/Niacinamide 10% serum.png" alt="Isntree SPF">
-    </div>
-    <div class="card-body">
-      <small class="brand">ISNTREE</small>
-      <h3>Hyaluronic Acid Airy Sun Stick SPF50+</h3>
-      <div class="tags"><span>Todo tipo de piel</span></div>
-      <div class="price-row"><strong>S/69.90</strong></div>
-      <button class="btn-cart">Añadir al carrito</button>
-    </div>
-  </article>
-
-</div>
 </section>
 <footer>
   <div class="wrap">
