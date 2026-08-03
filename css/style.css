@@ -371,7 +371,91 @@
     width:22px;
     border-radius:5px;
 }
+/* =========================================
+   ANIMACIONES DEL HERO
+   ========================================= */
 
+.hero-slide .hero-content{
+    opacity:0;
+    transform:translateY(18px);
+    transition:
+        opacity .7s ease .15s,
+        transform .7s ease .15s;
+}
+
+.hero-slide .hero-art{
+    opacity:0;
+    transform:translateX(25px) scale(.98);
+    transition:
+        opacity .8s ease .2s,
+        transform .8s ease .2s;
+}
+
+/* Slide activo */
+
+.hero-slide.active .hero-content{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.hero-slide.active .hero-art{
+    opacity:1;
+    transform:translateX(0) scale(1);
+}
+
+
+/* Animación del botón */
+
+.hero-slide .cta-btn{
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+.hero-slide .cta-btn span{
+    display:inline-block;
+    transition:transform .25s ease;
+}
+
+.hero-slide .cta-btn:hover span{
+    transform:translateX(4px);
+}
+
+
+/* Animación de las decoraciones */
+
+.hero-decor-1{
+    animation:floatFlower 5s ease-in-out infinite;
+}
+
+.hero-decor-2{
+    animation:floatStar 3.5s ease-in-out infinite;
+}
+
+@keyframes floatFlower{
+
+    0%,100%{
+        transform:rotate(15deg) translateY(0);
+    }
+
+    50%{
+        transform:rotate(20deg) translateY(-8px);
+    }
+
+}
+
+@keyframes floatStar{
+
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-6px) rotate(8deg);
+    }
+
+}
   /* ---------- Feature carousel (replaces static icon row) ---------- */
   .feature-carousel{max-width:1240px;margin:22px auto 0;padding:0 24px;}
   .feature-track-wrap{position:relative;overflow:hidden;border-radius:20px;background:#fff;border:1px solid #f6e6ec;}
