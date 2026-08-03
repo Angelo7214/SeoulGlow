@@ -85,63 +85,64 @@
     </div>
   </div>
 
-  <div class="catalog-layout">
+<div class="catalog-layout">
 
     <!-- Sidebar filtros -->
-<aside class="catalog-sidebar">
-  <button class="btn-filter">Ocultar filtros</button>
+    <aside class="catalog-sidebar">
+      <button class="btn-filter">Ocultar filtros</button>
 
-  <div class="filter-group">
-    <h4>Tipo de piel</h4>
-    <label><input type="checkbox" class="filtro-piel" value="normal"> Piel normal</label>
-    <label><input type="checkbox" class="filtro-piel" value="seca"> Piel seca</label>
-    <label><input type="checkbox" class="filtro-piel" value="grasa"> Piel grasa</label>
-    <label><input type="checkbox" class="filtro-piel" value="mixta"> Piel mixta</label>
-    <label><input type="checkbox" class="filtro-piel" value="sensible"> Piel sensible</label>
-    <label><input type="checkbox" class="filtro-piel" value="madura"> Piel madura</label>
-  </div>
+      <div class="filter-group">
+        <h4>Tipo de piel</h4>
+        <label><input type="checkbox" class="filtro-piel" value="normal"> Piel normal</label>
+        <label><input type="checkbox" class="filtro-piel" value="seca"> Piel seca</label>
+        <label><input type="checkbox" class="filtro-piel" value="grasa"> Piel grasa</label>
+        <label><input type="checkbox" class="filtro-piel" value="mixta"> Piel mixta</label>
+        <label><input type="checkbox" class="filtro-piel" value="sensible"> Piel sensible</label>
+        <label><input type="checkbox" class="filtro-piel" value="madura"> Piel madura</label>
+      </div>
 
-  <div class="filter-group">
-    <h4>Categoría</h4>
-    <label><input type="checkbox" class="filtro-categoria" value="limpiadores"> Limpiadores</label>
-    <label><input type="checkbox" class="filtro-categoria" value="tonicos"> Tónicos</label>
-    <label><input type="checkbox" class="filtro-categoria" value="serums"> Sérums</label>
-    <label><input type="checkbox" class="filtro-categoria" value="contorno"> Contorno de ojos</label>
-    <label><input type="checkbox" class="filtro-categoria" value="protectores"> Protectores solares</label>
-    <label><input type="checkbox" class="filtro-categoria" value="cremas"> Cremas hidratantes</label>
-  </div>
+      <div class="filter-group">
+        <h4>Categoría</h4>
+        <label><input type="checkbox" class="filtro-categoria" value="limpiadores"> Limpiadores</label>
+        <label><input type="checkbox" class="filtro-categoria" value="tonicos"> Tónicos</label>
+        <label><input type="checkbox" class="filtro-categoria" value="serums"> Sérums</label>
+        <label><input type="checkbox" class="filtro-categoria" value="contorno"> Contorno de ojos</label>
+        <label><input type="checkbox" class="filtro-categoria" value="protectores"> Protectores solares</label>
+        <label><input type="checkbox" class="filtro-categoria" value="cremas"> Cremas hidratantes</label>
+      </div>
 
-  <div class="filter-group">
-    <h4>Rango de precio</h4>
-    <input type="range" id="priceRange" min="0" max="300" value="300">
-    <div class="price-range">
-      <span>S/0</span>
-      <span id="priceRangeMax">S/300+</span>
-    </div>
-  </div>
+      <div class="filter-group">
+        <h4>Rango de precio</h4>
+        <input type="range" id="priceRange" min="0" max="300" value="300">
+        <div class="price-range">
+          <span>S/0</span>
+          <span id="priceRangeMax">S/300+</span>
+        </div>
+      </div>
 
-  <button class="btn-apply" id="applyFiltersBtn">Aplicar filtros</button>
-</aside>
+      <button class="btn-apply" id="applyFiltersBtn">Aplicar filtros</button>
+    </aside>
 
     <!-- Productos -->
-<div class="catalog-toolbar">
-  <div class="toolbar-left">
-    <label>Ordenar por:</label>
-    <select id="sortSelect">
-      <option value="vendidos">Más vendidos</option>
-      <option value="menor">Precio: menor a mayor</option>
-      <option value="mayor">Precio: mayor a menor</option>
-      <option value="novedades">Novedades</option>
-    </select>
+    <div class="catalog-content">
+      <div class="catalog-toolbar">
+        <div class="toolbar-left">
+          <label>Ordenar por:</label>
+          <select id="sortSelect">
+            <option value="vendidos">Más vendidos</option>
+            <option value="menor">Precio: menor a mayor</option>
+            <option value="mayor">Precio: mayor a menor</option>
+            <option value="novedades">Novedades</option>
+          </select>
+        </div>
+        <div class="toolbar-right" id="resultsCount">Mostrando 1–12 de 12 productos</div>
+      </div>
+
+      <div class="catalog-grid" id="catalogGrid"></div>
+    </div>
+
   </div>
-  <div class="toolbar-right" id="resultsCount">Mostrando 1–12 de 12 productos</div>
-</div>
 
-<div class="catalog-grid" id="catalogGrid"></div>
-
-</article>
-
-</div>
 </section>
 <footer>
   <div class="wrap">
