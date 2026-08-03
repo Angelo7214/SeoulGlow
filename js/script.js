@@ -14,20 +14,98 @@ if (utilSlides.length && utilDotsEl) {
 }
 
 /* ---------- Hero carousel ---------- */
-const heroTrack=document.getElementById('heroTrack');
-if (heroTrack) {
-  const heroSlideCount=heroTrack.children.length;
-  const heroDotsEl=document.getElementById('heroDots');
-  let heroIdx=0;
-  for(let i=0;i<heroSlideCount;i++){const d=document.createElement('span');if(i===0)d.classList.add('active');d.onclick=()=>{heroIdx=i;renderHero();};heroDotsEl.appendChild(d);}
-  function renderHero(){
-    heroTrack.style.transform=`translateX(-${heroIdx*100}%)`;
-    [...heroDotsEl.children].forEach((d,i)=>d.classList.toggle('active',i===heroIdx));
-  }
-  function moveHero(dir){heroIdx=(heroIdx+dir+heroSlideCount)%heroSlideCount;renderHero();}
-  setInterval(()=>moveHero(1),5000);
-}
+const heroTrack = document.getElementById('heroTrack');
 
+if (heroTrack) {
+
+  const heroSlides = heroTrack.querySelectorAll('.hero-slide');
+  const heroSlideCount = heroSlides.length;
+  const heroDotsEl = document.getElementById('heroDots');
+
+  let heroIdx = 0;
+
+  /* Crear indicadores */
+  if (heroDotsEl) {
+
+    for (let i = 0; i < heroSlideCount; i++) {
+
+      const d = document.createElement('span');
+
+      if (i === 0) {
+        d.classList.add('active');
+      }
+
+      d.onclick = () => {
+        heroIdx = i;
+        renderHero();
+      };
+      heroDotsEl.appendChild(d);
+    }
+
+  }
+
+  /* Mostrar slide */
+  function renderHero() {
+
+    heroTrack.style.transform =
+      `translateX(-${heroIdx * 100}%)`;
+
+
+    /* Activar animaciones del slide */
+    heroSlides.forEach((slide, i) => {
+
+      slide.classList.toggle(
+        'active',
+        i === heroIdx
+      );
+
+    });
+
+
+    /* Actualizar puntos */
+    if (heroDotsEl) {
+
+      [...heroDotsEl.children].forEach((dot, i) => {
+
+        dot.classList.toggle(
+          'active',
+          i === heroIdx
+        );
+
+      });
+
+    }
+
+  }
+
+
+  /* Cambiar slide */
+  function moveHero(dir) {
+
+    heroIdx =
+      (heroIdx + dir + heroSlideCount)
+      % heroSlideCount;
+
+    renderHero();
+
+  }
+
+
+  /* Mostrar correctamente el primer slide */
+  renderHero();
+
+
+  /* Cambio automático */
+  setInterval(() => {
+
+    moveHero(1);
+
+  }, 5000);
+
+
+  /* Hacer la función accesible desde los botones HTML */
+  window.moveHero = moveHero;
+}
 /* ---------- Feature carousel ---------- */
 const featureTrack=document.getElementById('featureTrack');
 if (featureTrack) {
