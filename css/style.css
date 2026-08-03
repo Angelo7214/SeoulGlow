@@ -54,7 +54,7 @@ button {
   padding: 0 24px;
 }
 
-/* ---------- Utility carousel (top bar) ---------- */
+/* ---------- Utility carousel ---------- */
 .util-bar {
   background: linear-gradient(90deg, var(--rose-700), var(--pink-600));
   color: #fff;
@@ -681,7 +681,7 @@ nav.main {
 
 }
 
-/* ---------- Feature carousel (replaces static icon row) ---------- */
+/* ---------- Feature carousel ---------- */
 .feature-carousel {
   max-width: 1240px;
   margin: 22px auto 0;
@@ -747,7 +747,7 @@ nav.main {
   background: var(--rose-700);
 }
 
-/* ---------- Skin type section (simplified images) ---------- */
+/* ---------- Skin type section ---------- */
 section {
   padding: 56px 0;
 }
@@ -973,7 +973,7 @@ section {
   line-height: 1.4;
 }
 
-/* ---------- Reviews (now full-width, DB-backed) ---------- */
+/* ---------- Reviews ---------- */
 .reviews-full .section-title {
   margin-bottom: 10px;
 }
@@ -1200,7 +1200,6 @@ footer {
   background: #fff;
 }
 
-/* privacy → chatbot trigger */
 .privacy-link {
   position: relative;
 }
@@ -2401,7 +2400,7 @@ footer {
   font-size: 13.5px;
 }
 
-/* ---------- Formularios (login / registro / dirección) ---------- */
+/* ---------- Formularios ---------- */
 .form-group {
   margin-bottom: 18px;
   max-width: 420px;
@@ -2541,7 +2540,7 @@ footer {
   white-space: nowrap;
 }
 
-/* ---------- Mis favoritos (reusa .prod-card, agrega botón quitar) ---------- */
+/* ---------- Mis favoritos ---------- */
 .favorites-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2643,7 +2642,7 @@ footer {
   gap: 8px;
 }
 
-/* ---------- Modales (Registro / Agregar dirección) ---------- */
+/* ---------- Modales ---------- */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -2856,8 +2855,6 @@ footer {
   border-color: var(--rose-700);
 }
 
-/* ---------- Sección - Paso 1 ---------- */
-
 .contenedor {
   max-width: 1240px;
   margin: 0 auto;
@@ -2985,7 +2982,6 @@ footer {
   background: rgba(255, 255, 255, .93);
 }
 
-/* ---------- Sección - Paso 2 Y 4 ---------- */
 
 .reseñas-grid {
   display: grid;
@@ -3070,7 +3066,6 @@ footer {
   color: var(--rose-700);
 }
 
-/* ---------- Sección - Paso 3 ---------- */
 .interruptor {
   display: flex;
   gap: 0;
@@ -3182,8 +3177,6 @@ footer {
   padding: 48px 24px;
   max-width: 900px;
 }
-
-/* ---------- Sección - Paso 5 ---------- */
 
 #paso5 {
   background-image: linear-gradient(rgba(255, 250, 249, .55), rgba(255, 250, 249, .55)), url(../Img/paso5-fondo.png);
