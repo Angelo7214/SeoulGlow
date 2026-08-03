@@ -969,8 +969,6 @@
   background:linear-gradient(160deg,#fbe6ee,#f4cddd);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;}
 .about-hero-media img{width:100%;height:100%;object-fit:cover;}
 .about-hero-media .flower{position:absolute;top:-18px;right:-14px;font-size:120px;color:#ffffff55;pointer-events:none;}
-.about-hero-caption{position:absolute;left:14px;bottom:14px;background:rgba(43,31,40,.75);color:#fff;
-  font-size:11px;padding:6px 10px;border-radius:8px;max-width:80%;}
 
 /* ======================================================
    TABS de navegación interna
