@@ -62,93 +62,116 @@
 </header>
 <!-- CONTENIDO DEL CARRITO -->
 
-<main class="wrap">
+<main class="wrap cart-page">
 
-    <div class="breadcrumb">
-        <a href="Home.html">Inicio</a> / <strong>Carrito de compras</strong>
+  <div class="catalog-breadcrumb">
+    <a href="Home.html">Inicio</a>
+    <span>›</span>
+    <strong>Carrito de compras</strong>
+  </div>
+
+  <div class="cart-header">
+    <div>
+      <h1>Tu carrito</h1>
+      <p id="cartCountText">Tienes <strong>2</strong> productos en tu carrito</p>
+    </div>
+    <a href="Catalogo.html" class="cart-continue">← Seguir comprando</a>
+  </div>
+
+  <div class="cart-layout">
+
+    <!-- Lista de productos -->
+    <div class="cart-list" id="cartList">
+
+      <article class="cart-item">
+        <button class="cart-item-remove" title="Quitar producto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="cart-item-img">
+          <img src="../Img/producto.png" alt="Producto de Skincare">
+        </div>
+        <div class="cart-item-info">
+          <small class="brand">Seoul Glow</small>
+          <h3>Producto de Skincare</h3>
+          <div class="tags"><span>Piel sensible</span></div>
+          <div class="cart-item-price-mobile">S/ 79.90</div>
+        </div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" data-action="decrease">−</button>
+          <input type="number" value="1" min="1" class="qty-input">
+          <button class="qty-btn" data-action="increase">+</button>
+        </div>
+        <div class="cart-item-price">S/ 79.90</div>
+      </article>
+
+      <article class="cart-item">
+        <button class="cart-item-remove" title="Quitar producto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="cart-item-img">
+          <img src="../Img/producto.png" alt="Espacio para otro producto">
+        </div>
+        <div class="cart-item-info">
+          <small class="brand">Marca</small>
+          <h3>Espacio para otro producto</h3>
+          <div class="tags"><span>Todo tipo de piel</span></div>
+          <div class="cart-item-price-mobile">S/ 00.00</div>
+        </div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" data-action="decrease">−</button>
+          <input type="number" value="1" min="1" class="qty-input">
+          <button class="qty-btn" data-action="increase">+</button>
+        </div>
+        <div class="cart-item-price">S/ 00.00</div>
+      </article>
+
+      <!-- Estado vacío: se activa con JS más adelante cuando no haya productos -->
+      <div class="cart-empty" id="cartEmpty" style="display:none;">
+        <div class="cart-empty-icon">🛍️</div>
+        <h3>Tu carrito está vacío</h3>
+        <p>Explora el catálogo y encuentra tu próxima rutina de skincare.</p>
+        <a href="Catalogo.html" class="cta-btn">Ir al catálogo</a>
+      </div>
+
     </div>
 
-    <div class="carrito">
+    <!-- Resumen -->
+    <aside class="cart-summary">
+      <h2>Resumen del pedido</h2>
 
-        <!-- Productos -->
-        <div class="lista-productos">
+      <div class="cart-promo">
+        <input type="text" placeholder="Código de descuento">
+        <button class="cart-promo-btn">Aplicar</button>
+      </div>
 
-            <h2>🛒 Mi carrito</h2>
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">S/ 79.90</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Envío</span>
+        <span class="cart-shipping-free">Gratis</span>
+      </div>
 
-            <div class="producto">
+      <div class="cart-summary-divider"></div>
 
-                <img src="../Img/producto.png" alt="Producto">
+      <div class="cart-summary-row cart-summary-total">
+        <span>Total</span>
+        <span id="cartTotal">S/ 79.90</span>
+      </div>
 
-                <div class="detalle">
+      <button class="cta-btn block cart-confirm">Confirmar compra</button>
 
-                    <h3>Producto de Skincare</h3>
+      <p class="cart-summary-note">🎁 Envío gratis en compras mayores a S/149</p>
 
-                    <p>Marca: Seoul Glow</p>
+      <div class="payment-icons cart-payment-icons">
+        <img src="../Img/visa.png" alt="Visa">
+        <img src="../Img/yape-app-seeklogo.png" alt="Yape">
+        <img src="../Img/plin-seeklogo.png" alt="Plin">
+      </div>
+    </aside>
 
-                    <p>S/ 79.90</p>
-
-                </div>
-
-                <div class="cantidad">
-
-                    <button>-</button>
-
-                    <input type="number" value="1">
-
-                    <button>+</button>
-
-                </div>
-
-            </div>
-
-            <div class="producto">
-
-                <img src="../Img/producto.png" alt="Producto">
-
-                <div class="detalle">
-
-                    <h3>Espacio para otro producto</h3>
-
-                    <p>Marca</p>
-
-                    <p>S/ 00.00</p>
-
-                </div>
-
-                <div class="cantidad">
-
-                    <button>-</button>
-
-                    <input type="number" value="1">
-
-                    <button>+</button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Resumen -->
-        <div class="resumen-compra">
-
-            <h2>Resumen</h2>
-
-            <p>Subtotal <span>S/ 79.90</span></p>
-
-            <p>Envío <span>Gratis</span></p>
-
-            <hr>
-
-            <h3>Total <span>S/ 79.90</span></h3>
-
-            <button class="btn-confirmar">
-                Confirmar compra
-            </button>
-
-        </div>
-
-    </div>
+  </div>
 
 </main>
 
