@@ -331,19 +331,28 @@ if (catalogGrid) {
 
   // "todas" en piel significa que el producto aplica a cualquier tipo de piel
   const catalogProducts = [
-    {brand:'ANUA', name:'Heartleaf 77% Soothing Toner', price:79.90, old:99.90, badge:'-20%', categoria:'tonicos', piel:['sensible'], destacado:5, nuevo:false, img:'../Img/7 Rice Ceramide Hydrating Barrier Serum.png'},
-    {brand:'COSRX', name:'Advanced Snail 96 Mucin Power Essence', price:89.90, old:105.90, badge:'-15%', categoria:'serums', piel:['todas'], destacado:6, nuevo:false, img:'../Img/Anua, Heartleaf Quercetinol™ Pore Deep Cleansing Foam.png'},
-    {brand:'BEAUTY OF JOSEON', name:'Relief Sun SPF50+ Rice + Probiotics', price:69.90, old:null, badge:'NUEVO', categoria:'protectores', piel:['mixta'], destacado:2, nuevo:true, img:'../Img/BEAUTY OF JOSEON RELIEF SUN  RICE + PROBIOTICS.png'},
-    {brand:'ISNTREE', name:'Centella Calming Gel Cream', price:89.90, old:99.90, badge:'-10%', categoria:'cremas', piel:['grasa'], destacado:3, nuevo:false, img:'../Img/Beauty of Joseon, Suero calmante.png'},
-    {brand:'SKIN1004', name:'Madagascar Centella Ampoule', price:89.90, old:null, badge:null, categoria:'serums', piel:['sensible'], destacado:4, nuevo:true, img:'../Img/CREMA COSRX ADVANCE SNAIL.png'},
-    {brand:'CERAVE', name:'Moisturizing Lotion', price:89.90, old:null, badge:null, categoria:'cremas', piel:['seca'], destacado:7, nuevo:false, img:'../Img/Dynasty Cream.png'},
-    {brand:'GARNIER', name:'Super UV Invisible Serum SPF50+', price:72.90, old:null, badge:null, categoria:'protectores', piel:['grasa'], destacado:8, nuevo:false, img:'../Img/Espuma Limpiadora Madagascar Centella Poremizing Deep Cleansing Foam.png'},
-    {brand:'LA ROCHE-POSAY', name:'Hyalu B5 Serum', price:129.90, old:null, badge:null, categoria:'serums', piel:['madura'], destacado:1, nuevo:false, img:'../Img/Full Fit Propolis Synergy Toner.png'},
-    {brand:'NUMBUZIN', name:'Pink Collagen Gel Cream', price:69.90, old:null, badge:null, categoria:'cremas', piel:['seca'], destacado:9, nuevo:true, img:'../Img/Limpiador Facial En Gel Cosrx Advanced Snail Mucin Gel Cleanser.png'},
-    {brand:'MEDIHEAL', name:'Tea Tree Care Solution Essential Mask', price:15.90, old:null, badge:null, categoria:'limpiadores', piel:['grasa'], destacado:10, nuevo:false, img:'../Img/Madagascar Centella Tone Brightening Ampolla de cápsulas.png'},
-    {brand:'ANUA', name:'Peach 70 Niacin Serum', price:89.90, old:null, badge:null, categoria:'serums', piel:['mixta'], destacado:11, nuevo:false, img:'../Img/Madagascar Centella, Hyalu-Cica Brightening Toner.png'},
-    {brand:'ISNTREE', name:'Hyaluronic Acid Airy Sun Stick SPF50+', price:69.90, old:null, badge:null, categoria:'protectores', piel:['todas'], destacado:12, nuevo:true, img:'../Img/Niacinamide 10% serum.png'}
-  ];
+{brand:'ANUA', name:'Anua Serum Heartleaf 80 Moisture Soothing Ampoule 30 ml', price:69.90, old:77.67, badge:'-10%', categoria:'serum', piel:['sensible'], destacado:5, nuevo:true, img:'../Img/Anua Serum Heartleaf 80 Moisture Soothing Ampoule 30 ml.png'},
+{brand:'ANUA', name:'Anua Espuma Limpiadora Heartleaf Quercetinol Pore Deep Cleansing Foam', price:59.90, old:66.56, badge:'-10%', categoria:'limpiadores', piel:['grasa','mixta'], destacado:4, nuevo:false, img:'../Img/Anua Espuma Limpiadora Heartleaf Quercetinol Pore Deep Cleansing Foam.png'},
+{brand:'ANUA', name:'Anua Protector Solar Heartleaf Silky Moisture Sun Cream', price:69.90, old:77.67, badge:'-10%', categoria:'protectores', piel:['mixta','sensible'], destacado:3, nuevo:false, img:'../Img/Anua Protector Solar Heartleaf Silky Moisture Sun Cream.png'},
+
+{brand:'ANUA', name:'Anua Niacinamide 10% + TXA 4% Serum', price:90.90, old:113.62, badge:'-20%', categoria:'serum', piel:['todas'], destacado:2, nuevo:false, img:'../Img/Anua Niacinamide 10% + TXA 4% Serum.png'},
+{brand:'ANUA', name:'Anua Heartleaf 77% Soothing Toner', price:89.90, old:112.38, badge:'-20%', categoria:'tonico', piel:['mixta','sensible'], destacado:1, nuevo:false, img:'../Img/Anua Heartleaf 77% Soothing Toner.png'},
+{brand:'BEAUTY OF JOSEON', name:'Serum Glow Serum: Proporlis+ Niacinamide Beauty Of Joseon', price:79.90, old:99.88, badge:'-20%', categoria:'serum', piel:['grasa','mixta'], destacado:5, nuevo:true, img:'../Img/Serum Glow Serum: Proporlis+ Niacinamide Beauty Of Joseon.png'},
+
+{brand:'BEAUTY OF JOSEON', name:'Beauty Of Joseon Limpiador Facial Green Plum Clean', price:89.90, old:null, badge:null, categoria:'limpiadores', piel:['todas'], destacado:4, nuevo:false, img:'../Img/Beauty Of Joseon Limpiador Facial Green Plum Clean.png'},
+{brand:'BEAUTY OF JOSEON', name:'Beauty of Joseon - Protector Solar Relief Sun: Rice + Probiotics', price:59.90, old:null, badge:null, categoria:'protectores', piel:['normal'], destacado:3, nuevo:false, img:'../Img/Beauty of Joseon - Protector Solar Relief Sun: Rice + Probiotics.png'},
+{brand:'BEAUTY OF JOSEON', name:'Beauty of Joseon Glow Deep Serum Rice + Alpha-Arbutin', price:85.90, old:null, badge:null, categoria:'serum', piel:['todas'], destacado:2, nuevo:false, img:'../Img/Beauty of Joseon Glow Deep Serum Rice + Alpha-Arbutin.png'},
+{brand:'BEAUTY OF JOSEON', name:'Tónico Glow Replenishing Rice Milk', price:42.00, old:null, badge:null, categoria:'tonico', piel:['normal','sensible'], destacado:1, nuevo:false, img:'../Img/Tónico Glow Replenishing Rice Milk.png'},
+
+{brand:'SKIN1004', name:'Madagascar Centella Serum calmante', price:50.00, old:null, badge:null, categoria:'serum', piel:['sensible'], destacado:5, nuevo:true, img:'../Img/Madagascar Centella Serum calmante.png'},
+{brand:'SKIN1004', name:'Madagascar Centella Hyalu-Cica Water-Fit Sun', price:80.00, old:null, badge:null, categoria:'protectores', piel:['normal','mixta'], destacado:4, nuevo:false, img:'../Img/Madagascar Centella Hyalu-Cica Water-Fit Sun.png'},
+{brand:'SKIN1004', name:'Madagascar Centella Ampoule Foam', price:77.90, old:null, badge:null, categoria:'limpiadores', piel:['sensible','mixta'], destacado:3, nuevo:false, img:'../Img/Madagascar Centella Ampoule Foam.png'},
+{brand:'SKIN1004', name:'Madagascar Centella Hyalu-Cica Blue Serum', price:35.00, old:null, badge:null, categoria:'serum', piel:['normal'], destacado:2, nuevo:false, img:'../Img/Madagascar Centella Hyalu-Cica Blue Serum.png'},
+
+{brand:'COSRX', name:'Cosrx Aloe Soothing Sun Cream Protector Solar', price:57.00, old:null, badge:null, categoria:'protectores', piel:['normal','sensible'], destacado:1, nuevo:false, img:'../Img/Cosrx Aloe Soothing Sun Cream Protector Solar.png'},
+{brand:'COSRX', name:'CosrxGel Limpiador Low pH Good Morning', price:40.00, old:null, badge:null, categoria:'limpiadores', piel:['sensible','grasa'], destacado:5, nuevo:true, img:'../Img/CosrxGel Limpiador Low pH Good Morning.png'},
+{brand:'COSRX', name:'COSRX The Hyaluronic Acid 3 Serum', price:65.00, old:null, badge:null, categoria:'serum', piel:['normal','sensible'], destacado:4, nuevo:false, img:'../Img/COSRX The Hyaluronic Acid 3 Serum.png'},
+];
 
   const priceRangeEl = document.getElementById('priceRange');
   const priceRangeMaxEl = document.getElementById('priceRangeMax');
