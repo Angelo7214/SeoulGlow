@@ -331,15 +331,15 @@ if (catalogGrid) {
 
   // "todas" en piel significa que el producto aplica a cualquier tipo de piel
   const catalogProducts = [
-{brand:'ANUA', name:'Anua Serum Heartleaf 80 Moisture Soothing Ampoule 30 ml', price:69.90, old:77.67, badge:'-10%', categoria:'serum', piel:['sensible'], destacado:5, nuevo:true, img:'../Img/Anua Serum Heartleaf 80 Moisture Soothing Ampoule 30 ml.png'},
-{brand:'ANUA', name:'Anua Espuma Limpiadora Heartleaf Quercetinol Pore Deep Cleansing Foam', price:59.90, old:66.56, badge:'-10%', categoria:'limpiadores', piel:['grasa','mixta'], destacado:4, nuevo:false, img:'../Img/Anua Espuma Limpiadora Heartleaf Quercetinol Pore Deep Cleansing Foam.png'},
-{brand:'ANUA', name:'Anua Protector Solar Heartleaf Silky Moisture Sun Cream', price:69.90, old:77.67, badge:'-10%', categoria:'protectores', piel:['mixta','sensible'], destacado:3, nuevo:false, img:'../Img/Anua Protector Solar Heartleaf Silky Moisture Sun Cream.png'},
+{brand:'ANUA', name:'Anua Serum Heartleaf 80 Moisture Soothing Ampoule 30 ml', price:69.90, old:77.67, badge:'-10%', categoria:'serum', piel:['sensible'], destacado:5, nuevo:true, img:'../Img/ANUA HIDRTATANTE.jpeg'},
+{brand:'ANUA', name:'Anua Espuma Limpiadora Heartleaf Quercetinol Pore Deep Cleansing Foam', price:59.90, old:66.56, badge:'-10%', categoria:'limpiadores', piel:['grasa','mixta'], destacado:4, nuevo:false, img:'../Img/ANUA LIMPIADOR.jpeg'},
+{brand:'ANUA', name:'Anua Protector Solar Heartleaf Silky Moisture Sun Cream', price:69.90, old:77.67, badge:'-10%', categoria:'protectores', piel:['mixta','sensible'], destacado:3, nuevo:false, img:'../Img/ANUA PROTECTOR SOLAR ENTERO.jpeg'},
 
-{brand:'ANUA', name:'Anua Niacinamide 10% + TXA 4% Serum', price:90.90, old:113.62, badge:'-20%', categoria:'serum', piel:['todas'], destacado:2, nuevo:false, img:'../Img/Anua Niacinamide 10% + TXA 4% Serum.png'},
-{brand:'ANUA', name:'Anua Heartleaf 77% Soothing Toner', price:89.90, old:112.38, badge:'-20%', categoria:'tonico', piel:['mixta','sensible'], destacado:1, nuevo:false, img:'../Img/Anua Heartleaf 77% Soothing Toner.png'},
-{brand:'BEAUTY OF JOSEON', name:'Serum Glow Serum: Proporlis+ Niacinamide Beauty Of Joseon', price:79.90, old:99.88, badge:'-20%', categoria:'serum', piel:['grasa','mixta'], destacado:5, nuevo:true, img:'../Img/Serum Glow Serum: Proporlis+ Niacinamide Beauty Of Joseon.png'},
+{brand:'ANUA', name:'Anua Niacinamide 10% + TXA 4% Serum', price:90.90, old:113.62, badge:'-20%', categoria:'serum', piel:['todas'], destacado:2, nuevo:false, img:'../Img/ANUA SERUM ANTOMANCHA.jpeg'},
+{brand:'ANUA', name:'Anua Heartleaf 77% Soothing Toner', price:89.90, old:112.38, badge:'-20%', categoria:'tonico', piel:['mixta','sensible'], destacado:1, nuevo:false, img:'../Img/SKIN1004 TONICO.jpg'},
+{brand:'BEAUTY OF JOSEON', name:'Serum Glow Serum: Proporlis+ Niacinamide Beauty Of Joseon', price:79.90, old:99.88, badge:'-20%', categoria:'serum', piel:['grasa','mixta'], destacado:5, nuevo:true, img:'../Img/BEAUTY OF JOSEON HIDRATANTE.jpeg'},
 
-{brand:'BEAUTY OF JOSEON', name:'Beauty Of Joseon Limpiador Facial Green Plum Clean', price:89.90, old:null, badge:null, categoria:'limpiadores', piel:['todas'], destacado:4, nuevo:false, img:'../Img/Beauty Of Joseon Limpiador Facial Green Plum Clean.png'},
+{brand:'BEAUTY OF JOSEON', name:'Beauty Of Joseon Limpiador Facial Green Plum Clean', price:89.90, old:null, badge:null, categoria:'limpiadores', piel:['todas'], destacado:4, nuevo:false, img:'../Img/BEAUTY OF JOSEON LIMPIADOR.jpeg'},
 {brand:'BEAUTY OF JOSEON', name:'Beauty of Joseon - Protector Solar Relief Sun: Rice + Probiotics', price:59.90, old:null, badge:null, categoria:'protectores', piel:['normal'], destacado:3, nuevo:false, img:'../Img/Beauty of Joseon - Protector Solar Relief Sun: Rice + Probiotics.png'},
 {brand:'BEAUTY OF JOSEON', name:'Beauty of Joseon Glow Deep Serum Rice + Alpha-Arbutin', price:85.90, old:null, badge:null, categoria:'serum', piel:['todas'], destacado:2, nuevo:false, img:'../Img/Beauty of Joseon Glow Deep Serum Rice + Alpha-Arbutin.png'},
 {brand:'BEAUTY OF JOSEON', name:'Tónico Glow Replenishing Rice Milk', price:42.00, old:null, badge:null, categoria:'tonico', piel:['normal','sensible'], destacado:1, nuevo:false, img:'../Img/Tónico Glow Replenishing Rice Milk.png'},
