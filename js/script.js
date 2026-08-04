@@ -331,20 +331,56 @@ if (catalogGrid) {
 
   // "todas" en piel significa que el producto aplica a cualquier tipo de piel
   const catalogProducts = [
+
+ {brand:'ANUA', name:'7 Rice Ceramide Hydrating Barrier Serum 50 ml', price:79.90, old:99.90, badge:'-20%', categoria:'tonicos', piel:['sensible'], destacado:5, nuevo:false, img:'../Img/7 Rice Ceramide Hydrating Barrier Serum.png'},
+
+
+
+
+{brand:'SKI1004', name:'Madagascar Centella, Hyalu-Cica Brightening Toner, 7,10 fl oz (210 ml)', price:89.90, old:null, badge:null, categoria:'serums', piel:['mixta'], destacado:11, nuevo:false, img:'../Img/Madagascar Centella, Hyalu-Cica Brightening Toner.png'},
+{brand:'ANUA', name:'Heartleaf 77% Soothing Toner', price:79.90, old:99.90, badge:'-20%', categoria:'tonicos', piel:['sensible'], destacado:5, nuevo:false, img:'../Img/Anua, Heartleaf Quercetinol™ Pore Deep Cleansing Foam.png'},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {brand:'ANUA', name:'Heartleaf 77% Soothing Toner', price:79.90, old:99.90, badge:'-20%', categoria:'tonicos', piel:['sensible'], destacado:5, nuevo:false, img:'../Img/7 Rice Ceramide Hydrating Barrier Serum.png'},
+    {brand:'SKI1004', name:'Madagascar Centella, Hyalu-Cica Brightening Toner, 7,10 fl oz (210 ml)', price:89.90, old:null, badge:null, categoria:'serums', piel:['mixta'], destacado:11, nuevo:false, img:'../Img/Madagascar Centella, Hyalu-Cica Brightening Toner.png'},
+    {brand:'COSRX', name:'Advanced Snail 96 Mucin Power Essence', price:89.90, old:105.90, badge:'-15%', categoria:'serums', piel:['todas'], destacado:6, nuevo:false, img:'../Img/CREMA COSRX ADVANCE SNAIL.png'},
+    {brand:'ISNTREE', name:'Hyaluronic Acid Airy Sun Stick SPF50+', price:69.90, old:null, badge:null, categoria:'protectores', piel:['todas'], destacado:12, nuevo:true, img:'../Img/Niacinamide 10% serum.png'}
     {brand:'COSRX', name:'Advanced Snail 96 Mucin Power Essence', price:89.90, old:105.90, badge:'-15%', categoria:'serums', piel:['todas'], destacado:6, nuevo:false, img:'../Img/Anua, Heartleaf Quercetinol™ Pore Deep Cleansing Foam.png'},
     {brand:'BEAUTY OF JOSEON', name:'Relief Sun SPF50+ Rice + Probiotics', price:69.90, old:null, badge:'NUEVO', categoria:'protectores', piel:['mixta'], destacado:2, nuevo:true, img:'../Img/BEAUTY OF JOSEON RELIEF SUN  RICE + PROBIOTICS.png'},
     {brand:'ISNTREE', name:'Centella Calming Gel Cream', price:89.90, old:99.90, badge:'-10%', categoria:'cremas', piel:['grasa'], destacado:3, nuevo:false, img:'../Img/Beauty of Joseon, Suero calmante.png'},
-    {brand:'SKIN1004', name:'Madagascar Centella Ampoule', price:89.90, old:null, badge:null, categoria:'serums', piel:['sensible'], destacado:4, nuevo:true, img:'../Img/CREMA COSRX ADVANCE SNAIL.png'},
+    -{brand:'SKI1004', name:'Madagascar Centella Ampoule', price:89.90, old:null, badge:null, categoria:'serums', piel:['sensible'], destacado:4, nuevo:true, img:'../Img/CREMA COSRX ADVANCE SNAIL.png'},
     {brand:'CERAVE', name:'Moisturizing Lotion', price:89.90, old:null, badge:null, categoria:'cremas', piel:['seca'], destacado:7, nuevo:false, img:'../Img/Dynasty Cream.png'},
     {brand:'GARNIER', name:'Super UV Invisible Serum SPF50+', price:72.90, old:null, badge:null, categoria:'protectores', piel:['grasa'], destacado:8, nuevo:false, img:'../Img/Espuma Limpiadora Madagascar Centella Poremizing Deep Cleansing Foam.png'},
     {brand:'LA ROCHE-POSAY', name:'Hyalu B5 Serum', price:129.90, old:null, badge:null, categoria:'serums', piel:['madura'], destacado:1, nuevo:false, img:'../Img/Full Fit Propolis Synergy Toner.png'},
     {brand:'NUMBUZIN', name:'Pink Collagen Gel Cream', price:69.90, old:null, badge:null, categoria:'cremas', piel:['seca'], destacado:9, nuevo:true, img:'../Img/Limpiador Facial En Gel Cosrx Advanced Snail Mucin Gel Cleanser.png'},
     {brand:'MEDIHEAL', name:'Tea Tree Care Solution Essential Mask', price:15.90, old:null, badge:null, categoria:'limpiadores', piel:['grasa'], destacado:10, nuevo:false, img:'../Img/Madagascar Centella Tone Brightening Ampolla de cápsulas.png'},
-    {brand:'ANUA', name:'Peach 70 Niacin Serum', price:89.90, old:null, badge:null, categoria:'serums', piel:['mixta'], destacado:11, nuevo:false, img:'../Img/Madagascar Centella, Hyalu-Cica Brightening Toner.png'},
     {brand:'ISNTREE', name:'Hyaluronic Acid Airy Sun Stick SPF50+', price:69.90, old:null, badge:null, categoria:'protectores', piel:['todas'], destacado:12, nuevo:true, img:'../Img/Niacinamide 10% serum.png'}
-  ];
+    
 
+
+
+
+
+
+
+
+
+
+  ]
+  
   const priceRangeEl = document.getElementById('priceRange');
   const priceRangeMaxEl = document.getElementById('priceRangeMax');
   const sortSelectEl = document.getElementById('sortSelect');
