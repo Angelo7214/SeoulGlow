@@ -353,7 +353,7 @@ if (catalogGrid) {
 {brand:'COSRX', name:'CosrxGel Limpiador Low pH Good Morning', price:40.00, old:null, badge:null, categoria:'limpiadores', piel:['sensible','grasa'], destacado:5, nuevo:true, img:'../Img/CosrxGel Limpiador Low pH Good Morning.png'},
 {brand:'COSRX', name:'COSRX The Hyaluronic Acid 3 Serum', price:65.00, old:null, badge:null, categoria:'serum', piel:['normal','sensible'], destacado:4, nuevo:false, img:'../Img/COSRX The Hyaluronic Acid 3 Serum.png'},
 ];
-kjk
+
   const priceRangeEl = document.getElementById('priceRange');
   const priceRangeMaxEl = document.getElementById('priceRangeMax');
   const sortSelectEl = document.getElementById('sortSelect');
