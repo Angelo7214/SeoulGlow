@@ -30,6 +30,14 @@
     --radius-large: 32px;
 
     --transition: 0.3s ease;
+
+    --pink-vivid: #e8447a;
+    --pink-vivid-dark: #c92e5f;
+
+    --gradient-hero: linear-gradient(135deg, #f8dfe8 0%, #e9e2f6 50%, #fdf1f5 100%);
+
+    --shadow-deep: 0 20px 50px rgba(85, 54, 62, 0.18);
+    --shadow-glow: 0 0 0 4px rgba(232, 68, 122, 0.12);
 }
 
 
@@ -412,7 +420,7 @@ nav.main a:hover::after {
 
     line-height: 1.02;
 
-    font-weight: normal;
+    font-weight: 600;
 
     color: var(--brown);
 
@@ -446,7 +454,7 @@ nav.main a:hover::after {
 
     border: none;
 
-    background: var(--brown);
+    background: var(--pink-vivid);
     color: white;
 
     padding: 15px 24px;
@@ -463,10 +471,10 @@ nav.main a:hover::after {
 
 
 .cta-btn:hover {
-    background: var(--pink-dark);
+    background: var(--pink-vivid-dark);
     transform: translateY(-3px);
 
-    box-shadow: 0 10px 25px rgba(184, 79, 117, 0.25);
+    box-shadow: 0 15px 35px rgba(232, 68, 122, 0.35);
 }
 
 
@@ -492,17 +500,18 @@ nav.main a:hover::after {
 
 .hero-art::before {
     content: "";
-
     position: absolute;
 
-    width: 430px;
-    height: 430px;
+    width: 460px;
+    height: 460px;
 
-    border-radius: 50%;
+    border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%;
 
-    background: rgba(255, 255, 255, 0.75);
+    background: var(--gradient-hero);
 
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-deep);
+
+    animation: blobMove 8s ease-in-out infinite;
 }
 
 
@@ -727,7 +736,7 @@ nav.main a:hover::after {
 
     line-height: 1.1;
 
-    font-weight: normal;
+    font-weight: 600;
 }
 
 
@@ -832,16 +841,17 @@ nav.main a:hover::after {
 
 
 .skin-card.selected .skin-avatar {
-    border-color: var(--pink);
+    border-color: var(--pink-vivid);
 
     transform: scale(1.05);
 
-    box-shadow: 0 15px 35px rgba(217, 108, 145, 0.25);
+    box-shadow: var(--shadow-glow), 0 15px 35px rgba(232, 68, 122, 0.25);
 }
 
 
 .skin-card.selected span:last-child {
-    color: var(--pink-dark);
+    color: var(--pink-vivid-dark);
+    font-weight: 700;
 }
 
 
@@ -975,7 +985,7 @@ nav.main a:hover::after {
 .product-card:hover {
     transform: translateY(-8px);
 
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--shadow-deep);
 }
 
 
@@ -1033,7 +1043,7 @@ nav.main a:hover::after {
 
     background: white;
 
-    color: var(--pink);
+    color: var(--pink-vivid);
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 
@@ -1086,9 +1096,9 @@ nav.main a:hover::after {
 
     margin-bottom: 18px;
 
-    font-size: 18px;
+    font-size: 21px;
 
-    color: var(--brown);
+    color: var(--pink-vivid-dark);
 }
 
 
@@ -1103,7 +1113,7 @@ nav.main a:hover::after {
 
     border-radius: 25px;
 
-    background: var(--brown);
+    background: var(--pink-vivid);
 
     color: white;
 
@@ -1117,7 +1127,9 @@ nav.main a:hover::after {
 
 
 .add-cart:hover {
-    background: var(--pink-dark);
+    background: var(--pink-vivid-dark);
+
+    box-shadow: 0 10px 25px rgba(232, 68, 122, 0.3);
 }
 
 
@@ -1128,12 +1140,8 @@ nav.main a:hover::after {
 .routine-section {
     padding: 110px 0;
 
-    background:
-        linear-gradient(
-            120deg,
-            var(--lavender),
-            var(--pink-soft)
-        );
+    background: var(--brown);
+    color: white;
 }
 
 
@@ -1153,12 +1161,12 @@ nav.main a:hover::after {
 
     line-height: 1.05;
 
-    font-weight: normal;
+    font-weight: 600;
 }
 
 
 .routine-heading h2 em {
-    color: var(--pink-dark);
+    color: #f2b4c9;
     font-style: italic;
 }
 
@@ -1166,7 +1174,7 @@ nav.main a:hover::after {
 .routine-heading p {
     max-width: 550px;
 
-    color: var(--brown-light);
+    color: #d9cacc;
 }
 
 
@@ -1186,9 +1194,9 @@ nav.main a:hover::after {
 
     padding: 28px;
 
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.08);
 
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 
     border-radius: var(--radius-medium);
 
@@ -1201,9 +1209,9 @@ nav.main a:hover::after {
 .routine-card:hover {
     transform: translateY(-8px);
 
-    background: white;
+    background: rgba(255, 255, 255, 0.14);
 
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -1212,7 +1220,7 @@ nav.main a:hover::after {
 
     margin-bottom: 25px;
 
-    color: var(--pink-dark);
+    color: #f2b4c9;
 
     font-size: 11px;
     font-weight: bold;
@@ -1238,11 +1246,13 @@ nav.main a:hover::after {
     font-size: 23px;
 
     font-weight: normal;
+
+    color: white;
 }
 
 
 .routine-card p {
-    color: var(--brown-light);
+    color: #d9cacc;
 
     font-size: 12px;
 }
@@ -1367,7 +1377,7 @@ nav.main a:hover::after {
 .review-stars {
     margin-bottom: 18px;
 
-    color: #e4a95d;
+    color: var(--pink-vivid);
 
     letter-spacing: 3px;
 
@@ -1509,7 +1519,7 @@ nav.main a:hover::after {
 
     border-radius: 30px;
 
-    background: var(--pink);
+    background: var(--pink-vivid);
 
     color: white;
 
@@ -1523,7 +1533,7 @@ nav.main a:hover::after {
 
 
 .nl-form button:hover {
-    background: var(--pink-dark);
+    background: var(--pink-vivid-dark);
 }
 
 
@@ -1653,6 +1663,12 @@ footer {
         transform: translateY(0);
     }
 
+}
+
+
+@keyframes blobMove {
+    0%, 100% { border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%; }
+    50% { border-radius: 45% 55% 40% 60% / 55% 45% 55% 45%; }
 }
 
 
@@ -2029,4 +2045,267 @@ footer {
         grid-template-columns: 1fr;
     }
 
+}
+.hero-carousel {
+    position: relative;
+    min-height: 640px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: background-image 0.6s ease;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        100deg,
+        rgba(77, 59, 61, 0.8) 0%,
+        rgba(77, 59, 61, 0.45) 45%,
+        rgba(77, 59, 61, 0.1) 80%
+    );
+    z-index: 1;
+}
+
+.hero-slide {
+    position: relative;
+    z-index: 2;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.eyebrow-pill {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content h1,
+.hero-content p {
+    color: white;
+}
+
+.hero-content h1 em {
+    color: var(--pink-light);
+}
+
+.hero-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.hero-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    min-width: 190px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-medium);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.hero-badge span {
+    font-size: 20px;
+}
+
+.hero-badge p {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .hero-badges {
+        display: none;
+    }
+}
+.cuenta-page {
+    min-height: calc(100vh - 130px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cuenta-visual {
+    position: relative;
+    background: url("/Img/Banner 1.png") center/cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+}
+
+.cuenta-visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(77,59,61,0.2), rgba(77,59,61,0.8));
+}
+
+.cuenta-visual-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.cuenta-visual-content .logo {
+    color: white;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.cuenta-visual-content h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.cuenta-visual-content h1 em {
+    color: var(--pink-light);
+    font-style: italic;
+}
+
+.cuenta-visual-content p {
+    max-width: 380px;
+    color: #eee0e2;
+    margin-bottom: 30px;
+}
+
+.cuenta-stats {
+    display: flex;
+    gap: 16px;
+}
+
+.cuenta-stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-medium);
+    backdrop-filter: blur(8px);
+}
+
+.cuenta-stat strong {
+    display: block;
+    font-size: 14px;
+}
+
+.cuenta-stat small {
+    color: #e8dadc;
+    font-size: 10px;
+}
+
+.cuenta-form-panel {
+    padding: 70px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--cream);
+}
+
+.cuenta-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    color: var(--pink-vivid);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cuenta-form-panel h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.cuenta-subtitle {
+    color: var(--brown-light);
+    margin-bottom: 30px;
+}
+
+.cuenta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.campo input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #ead9dd;
+    border-radius: var(--radius-small);
+    padding: 0 16px;
+    outline: none;
+    transition: var(--transition);
+}
+
+.campo input:focus {
+    border-color: var(--pink-vivid);
+    box-shadow: var(--shadow-glow);
+}
+
+.campo-password {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.cuenta-submit {
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.cuenta-encryption {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--brown-light);
+}
+
+@media (max-width: 900px) {
+    .cuenta-page {
+        grid-template-columns: 1fr;
+    }
+    .cuenta-visual {
+        min-height: 280px;
+    }
+    .cuenta-form-panel {
+        padding: 50px 30px;
+    }
 }
