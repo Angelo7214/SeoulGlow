@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 function Home() {
 
     // =========================
@@ -192,92 +191,8 @@ function Home() {
             estrellas: 5
         }
     ];
-
-
     return (
         <div className="seoul-glow-home">
-
-            {/* =========================================
-                BARRA SUPERIOR
-            ========================================= */}
-
-            <div className="util-bar">
-                <span>🌸 Skincare coreano seleccionado para ti</span>
-                <span>🚚 Envíos a todo el Perú</span>
-                <span>💳 Yape · Plin · Tarjetas</span>
-            </div>
-
-
-            {/* =========================================
-                NAVBAR
-            ========================================= */}
-
-            <header className="site">
-
-                <div className="header-row">
-
-                    <a href="#" className="logo">
-                        🌸 SEOUL GLOW
-                        <small>Korean Skincare</small>
-                    </a>
-
-                    <div className="search">
-                        <input
-                            type="text"
-                            placeholder="¿Qué estás buscando?"
-                        />
-
-                        <span>⌕</span>
-                    </div>
-
-                    <div className="header-icons">
-
-                        <a href="#tiendas" className="icon-col">
-                            <img
-                                src="/Img/tienda.png"
-                                alt="Tiendas"
-                                className="icono-header"
-                            />
-                            <span>Tiendas</span>
-                        </a>
-
-                        <a href="#cuenta" className="icon-col">
-                            <img
-                                src="/Img/usuario.png"
-                                alt="Cuenta"
-                                className="icono-header"
-                            />
-                            <span>Mi cuenta</span>
-                        </a>
-
-                        <a href="#carrito" className="icon-col">
-                            <img
-                                src="/Img/carrito.png"
-                                alt="Carrito"
-                                className="icono-carrito"
-                            />
-                            <span className="cart-badge">0</span>
-                            <span>Carrito</span>
-                        </a>
-
-                    </div>
-                </div>
-
-
-                <nav className="main">
-
-                    <a href="#productos">PRODUCTOS</a>
-                    <a href="#piel">TIPOS DE PIEL</a>
-                    <a href="#rutina">RUTINAS</a>
-                    <a href="#favoritos">FAVORITOS</a>
-                    <a href="#ofertas">OFERTAS</a>
-                    <a href="#nosotros">SOBRE NOSOTROS</a>
-
-                </nav>
-
-            </header>
-
-
             {/* =========================================
                 HERO
             ========================================= */}
@@ -806,90 +721,8 @@ function Home() {
                 </div>
 
             </section>
-
-
-            {/* =========================================
-                FOOTER
-            ========================================= */}
-
-            <footer>
-
-                <div className="wrap">
-
-                    <div className="foot-grid">
-
-                        <div className="foot-brand">
-
-                            <div className="logo">
-                                🌸 SEOUL GLOW
-                            </div>
-
-                            <p>
-                                Korean skincare seleccionado
-                                para ayudarte a construir una
-                                rutina que realmente disfrutes.
-                            </p>
-
-                        </div>
-
-
-                        <div>
-                            <h5>COMPRAR</h5>
-
-                            <ul>
-                                <li>Productos</li>
-                                <li>Marcas</li>
-                                <li>Tipos de piel</li>
-                                <li>Ofertas</li>
-                            </ul>
-                        </div>
-
-
-                        <div>
-                            <h5>AYUDA</h5>
-
-                            <ul>
-                                <li>Preguntas frecuentes</li>
-                                <li>Envíos y devoluciones</li>
-                                <li>Métodos de pago</li>
-                                <li>Contacto</li>
-                            </ul>
-                        </div>
-
-
-                        <div>
-                            <h5>SEOUL GLOW</h5>
-
-                            <ul>
-                                <li>Nuestra historia</li>
-                                <li>Tips & Rutina</li>
-                                <li>Sostenibilidad</li>
-                                <li>Blog</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-
-                    <div className="foot-bottom">
-
-                        <span>
-                            © 2026 Seoul Glow.
-                            Todos los derechos reservados.
-                        </span>
-
-                        <span>
-                            Visa · Yape · Plin
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </footer>
-
-        </div>
-    );
+             </div>
+              );
 }
 
 export default Home;
