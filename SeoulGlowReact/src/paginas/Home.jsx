@@ -49,6 +49,12 @@ function Home() {
         );
     };
 
+        const beneficiosHero = [
+        { icono: "🌿", titulo: "Ingredientes Naturales" },
+        { icono: "💧", titulo: "Testeado Dermatológicamente" },
+        { icono: "🐰", titulo: "Cruelty Free" },
+        { icono: "🧴", titulo: "Fórmulas Limpias" }
+    ];
 
     // =========================
     // TIPO DE PIEL
@@ -197,90 +203,58 @@ function Home() {
                 HERO
             ========================================= */}
 
-            <section className="hero-carousel">
+    <section
+    className="hero-carousel"
+    style={{ backgroundImage: `url(${banners[bannerActual].image})` }}
+>
+    <div className="hero-overlay" />
 
-                <div className="hero-slide">
+    <div className="hero-slide">
 
-                    <div className="hero-content">
+        <div className="hero-content">
+            <span className="eyebrow-pill">
+                {banners[bannerActual].eyebrow}
+            </span>
 
-                        <span className="eyebrow">
-                            {banners[bannerActual].eyebrow}
-                        </span>
+            <h1>
+                {banners[bannerActual].title}
+                <br />
+                <em>{banners[bannerActual].highlight}</em>
+            </h1>
 
-                        <h1>
-                            {banners[bannerActual].title}
-                            <br />
-                            <em>
-                                {banners[bannerActual].highlight}
-                            </em>
-                        </h1>
+            <p>{banners[bannerActual].description}</p>
 
-                        <p>
-                            {banners[bannerActual].description}
-                        </p>
+            <a href="#piel" className="cta-btn">
+                {banners[bannerActual].button}
+                <span>→</span>
+            </a>
+        </div>
 
-                        <a href="#piel" className="cta-btn">
-                            {banners[bannerActual].button}
-                            <span>→</span>
-                        </a>
-
-                    </div>
-
-
-                    <div className="hero-art">
-
-                        <span className="hero-decor hero-decor-1">
-                            ✿
-                        </span>
-
-                        <span className="hero-decor hero-decor-2">
-                            ✦
-                        </span>
-
-                        <img
-                            src={banners[bannerActual].image}
-                            alt="Skincare coreano"
-                        />
-
-                    </div>
-
+        <div className="hero-badges">
+            {beneficiosHero.map((b) => (
+                <div className="hero-badge" key={b.titulo}>
+                    <span>{b.icono}</span>
+                    <p>{b.titulo}</p>
                 </div>
+            ))}
+        </div>
 
+    </div>
 
-                <button
-                    className="hero-nav prev"
-                    onClick={anteriorBanner}
-                >
-                    ‹
-                </button>
+    <button className="hero-nav prev" onClick={anteriorBanner}>‹</button>
+    <button className="hero-nav next" onClick={siguienteBanner}>›</button>
 
-                <button
-                    className="hero-nav next"
-                    onClick={siguienteBanner}
-                >
-                    ›
-                </button>
+    <div className="hero-dots">
+        {banners.map((_, index) => (
+            <button
+                key={index}
+                className={bannerActual === index ? "active" : ""}
+                onClick={() => setBannerActual(index)}
+            />
+        ))}
+    </div>
 
-
-                <div className="hero-dots">
-
-                    {banners.map((_, index) => (
-
-                        <button
-                            key={index}
-                            className={
-                                bannerActual === index
-                                    ? "active"
-                                    : ""
-                            }
-                            onClick={() => setBannerActual(index)}
-                        />
-
-                    ))}
-
-                </div>
-
-            </section>
+</section>
 
 
             {/* =========================================
