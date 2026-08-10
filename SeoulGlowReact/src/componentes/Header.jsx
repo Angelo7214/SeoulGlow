@@ -256,11 +256,11 @@ function Header({ paginaActual, setPaginaActual }) {
                                     <span>→</span>
                                 </a>
 
-                                
+                                <a
                                     href="#favoritos"
                                     className="hero-secondary"
                                     onClick={() => setPaginaActual("home")}
-                                <a>
+                                >
                                     Explorar favoritos
                                 </a>
                             </div>

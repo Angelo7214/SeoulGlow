@@ -3964,3 +3964,224 @@ nav.main a:hover::after {
 #paso3 .titulo-seccion p, #paso4 .titulo-seccion p { color: rgba(255, 255, 255, .65); }
 .piel-card { transition: var(--transition); }
 .piel-card:hover { transform: translateY(-6px); }
+
+/* =========================================================
+   31. FOOTER ATREVIDO
+   ========================================================= */
+
+.site-footer {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0 25px;
+    background: linear-gradient(160deg, #3d2029 0%, #29191f 55%, #1c1014 100%);
+    color: white;
+}
+
+
+/* OLA DE TRANSICIÓN */
+
+.footer-wave {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 3;
+    line-height: 0;
+}
+
+.footer-wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* BRILLOS DE FONDO (igual estilo que hero-modern::before/after) */
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    top: -220px;
+    left: -140px;
+    background: radial-gradient(circle, rgba(232,68,122,0.18), transparent 65%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.site-footer::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -160px;
+    bottom: -160px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 65%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* PÉTALOS FLOTANTES */
+
+.footer-decoration {
+    position: absolute;
+    z-index: 1;
+    color: rgba(255,255,255,0.35);
+    font-size: 28px;
+    animation: floating 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.footer-decoration-one {
+    top: 12%;
+    left: 6%;
+}
+
+.footer-decoration-two {
+    top: 55%;
+    right: 9%;
+    font-size: 20px;
+    animation-delay: 1.8s;
+}
+
+.footer-decoration-three {
+    bottom: 10%;
+    left: 30%;
+    font-size: 16px;
+    animation-delay: 3.2s;
+}
+
+
+/* =========================================================
+   WRAP / GRID (con halo detrás del logo)
+   ========================================================= */
+
+.site-footer .wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 5%;
+}
+
+.site-footer .foot-brand {
+    position: relative;
+}
+
+.site-footer .foot-brand::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    top: -60px;
+    left: -60px;
+    background: radial-gradient(circle, rgba(232,68,122,0.25), transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.site-footer .foot-brand .logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* SEPARADOR CON GRADIENTE ANIMADO */
+
+.site-footer .foot-grid {
+    position: relative;
+    border-bottom: none;
+    padding-bottom: 45px;
+}
+
+.site-footer .foot-grid::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(232,68,122,0.6) 25%,
+        rgba(255,212,227,0.9) 50%,
+        rgba(232,68,122,0.6) 75%,
+        transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}
+
+
+/* =========================================================
+   ÍCONOS SOCIALES ESTILO GLASS
+   ========================================================= */
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.20);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: rgba(255,255,255,0.85);
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(232,68,122,0.35);
+}
+
+
+/* FOOTER BOTTOM */
+
+.foot-bottom {
+    position: relative;
+    z-index: 2;
+    max-width: 1150px;
+    margin: auto;
+    padding: 22px 5% 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: rgba(255,255,255,0.35);
+    font-size: 9px;
+}
+
+
+@media (max-width: 700px) {
+    .footer-decoration {
+        display: none;
+    }
+    .footer-wave {
+        height: 55px;
+    }
+    .site-footer {
+        padding-top: 60px;
+    }
+}
