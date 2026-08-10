@@ -92,7 +92,7 @@ const heroPorPagina = {
                 highlight: "rutinas.",
                 description: "Aprende a construir tu rutina ideal paso a paso.",
                 button: "VER RUTINAS",
-                image: "/Img/Banner Rutinas.png",
+                image: "/Img/tips-rutina-banner.png",
             },
         ],
     },
