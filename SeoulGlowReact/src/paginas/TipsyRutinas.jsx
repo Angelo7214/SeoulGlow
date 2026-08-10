@@ -79,24 +79,6 @@ const TarjetaTip = ({ t }) => (
 
 const TipsyRutinas = () => (
   <>
-    <p className="ruta">Inicio / <span>Tips & Rutina</span></p>
-
-    <section className="tips-banner">
-      <div>
-        <span className="etiqueta">Guía completa de skincare coreano</span>
-        <h1>Aprende, descubre y arma <em>tu rutina perfecta</em> de skincare</h1>
-        <p>Todo lo que necesitas saber sobre tu piel: descubre tu tipo, entiende sus necesidades y arma una rutina coreana paso a paso, con tips de expertos.</p>
-        <div className="botones">
-          <a href="#paso1" className="cta-btn">Descubre tu tipo de piel</a>
-          <a href="#paso3" className="btn-outline">Arma tu rutina</a>
-        </div>
-        <div className="cifras">
-          <div><strong>6</strong><span>Tipos de piel</span></div>
-          <div><strong>30+</strong><span>Guías y tips</span></div>
-          <div><strong>6 pasos</strong><span>Rutina coreana</span></div>
-        </div>
-      </div>
-    </section>
 
     <nav className="tabs">
       <a href="#paso1" className="activo">Tipo de piel</a>
