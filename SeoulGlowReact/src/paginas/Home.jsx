@@ -1,9 +1,9 @@
 import { useState } from "react";
-function Home() {
 
-    // =========================
-    // HERO
-    // =========================
+function Home() {
+    /* =========================================================
+       CARRUSEL PRINCIPAL
+       ========================================================= */
 
     const banners = [
         {
@@ -13,518 +13,712 @@ function Home() {
             description:
                 "Descubre lo mejor del skincare coreano para una piel saludable, hidratada y radiante.",
             button: "DESCUBRIR PRODUCTOS",
-            image: "/Img/Banner 2.png"
+            image: "../Img/Banner 2.png",
         },
         {
-            eyebrow: "Ritual coreano",
-            title: "Construye tu",
-            highlight: "rutina perfecta.",
+            eyebrow: "K-Beauty para ti",
+            title: "Cuida tu piel,",
+            highlight: "conoce tu glow.",
             description:
-                "Encuentra productos pensados para las necesidades reales de tu piel.",
-            button: "DESCUBRIR MI RUTINA",
-            image: "/Img/Banner 1.png"
+                "Encuentra productos seleccionados para crear una rutina de skincare que realmente disfrutes.",
+            button: "EXPLORAR COLECCIÓN",
+            image: "../Img/Banner 1.png",
         },
         {
-            eyebrow: "-20% esta semana",
-            title: "Tu piel merece",
-            highlight: "un poco de glow.",
+            eyebrow: "Belleza coreana",
+            title: "Una rutina que",
+            highlight: "tu piel agradecerá.",
             description:
-                "Descubre favoritos de la comunidad y encuentra nuevas formas de cuidar tu piel.",
-            button: "VER OFERTAS",
-            image: "/Img/Banner 3.png"
-        }
+                "Ingredientes innovadores, fórmulas efectivas y el mejor cuidado inspirado en Corea.",
+            button: "VER FAVORITOS",
+            image: "../Img/Banner 3.png",
+        },
     ];
 
-    const [bannerActual, setBannerActual] = useState(0);
+         const [bannerActual, setBannerActual] = useState(0);
 
-    const siguienteBanner = () => {
-        setBannerActual((actual) =>
-            actual === banners.length - 1 ? 0 : actual + 1
-        );
+        const siguienteBanner = () => {
+         setBannerActual((actual) =>
+        actual === banners.length - 1 ? 0 : actual + 1
+      );
     };
 
-    const anteriorBanner = () => {
-        setBannerActual((actual) =>
-            actual === 0 ? banners.length - 1 : actual - 1
-        );
-    };
+         const anteriorBanner = () => {
+         setBannerActual((actual) =>
+        actual === 0 ? banners.length - 1 : actual - 1
+       );
+    };  
+    /* =========================================================
+       BENEFICIOS DEL HERO
+       ========================================================= */
 
-        const beneficiosHero = [
-        { icono: "🌿", titulo: "Ingredientes Naturales" },
-        { icono: "💧", titulo: "Testeado Dermatológicamente" },
-        { icono: "🐰", titulo: "Cruelty Free" },
-        { icono: "🧴", titulo: "Fórmulas Limpias" }
+    const beneficiosHero = [
+        {
+            icono: "🌿",
+            titulo: "Ingredientes naturales",
+        },
+        {
+            icono: "💧",
+            titulo: "Testado dermatológicamente",
+        },
+        {
+            icono: "🐰",
+            titulo: "Cruelty Free",
+        },
+        {
+            icono: "🧴",
+            titulo: "Fórmulas limpias",
+        },
     ];
 
-    // =========================
-    // TIPO DE PIEL
-    // =========================
+    /* =========================================================
+       BENEFICIOS GENERALES
+       ========================================================= */
+
+    const beneficios = [
+        {
+            icono: "🚚",
+            titulo: "Envíos a todo el Perú",
+            descripcion: "Rápidos y seguros",
+        },
+        {
+            icono: "✓",
+            titulo: "Productos originales",
+            descripcion: "Marcas seleccionadas",
+        },
+        {
+            icono: "🔒",
+            titulo: "Compra segura",
+            descripcion: "Tus datos protegidos",
+        },
+        {
+            icono: "💬",
+            titulo: "Atención personalizada",
+            descripcion: "Estamos para ayudarte",
+        },
+    ];
+
+    /* =========================================================
+       TIPOS DE PIEL
+       ========================================================= */
 
     const tiposPiel = [
         {
-            nombre: "Piel Grasa/Mixta",
-            imagen: "/Img/Piel mixta.png"
+            nombre: "Piel seca",
+            imagen: "/Img/Piel seca.png",
         },
         {
-            nombre: "Piel Seca",
-            imagen: "/Img/Piel seca.png"
+            nombre: "Piel grasa",
+            imagen: "/Img/Piel grasa.png",
         },
         {
-            nombre: "Piel Sensible",
-            imagen: "/Img/Piel sensible.png"
+            nombre: "Piel mixta",
+            imagen: "/Img/Piel mixta.png",
         },
         {
-            nombre: "Piel Madura",
-            imagen: "/Img/Piel madura.png"
+            nombre: "Piel sensible",
+            imagen: "/Img/Piel sensible.png",
         },
         {
-            nombre: "Piel con Acné",
-            imagen: "/Img/Piel con acne.png"
+            nombre: "Piel normal",
+            imagen: "/Img/Piel normal.png",
         },
         {
-            nombre: "Piel Normal",
-            imagen: "/Img/Piel normal.png"
-        }
+            nombre: "Piel madura",
+            imagen: "/Img/Piel madura.png",
+        },
     ];
 
-    const [pielSeleccionada, setPielSeleccionada] = useState(null);
+    const [pielSeleccionada, setPielSeleccionada] = useState("");
 
-
-    // =========================
-    // PRODUCTOS
-    // =========================
+    /* =========================================================
+       PRODUCTOS
+       ========================================================= */
 
     const productos = [
         {
             id: 1,
-            nombre: "Advanced Snail Essence",
             marca: "COSRX",
-            precio: 79.90,
+            nombre: "Advanced Snail 96 Mucin Power Essence",
             categoria: "Esencia",
-            piel: "Piel Seca",
-            imagen: "/Img/Banner 1.png",
-            favorito: true
+            precio: "S/ 79.90",
+            imagen: "/Img/COSRX.png",
+            favorito: true,
         },
         {
             id: 2,
-            nombre: "Relief Sun",
-            marca: "Beauty of Joseon",
-            precio: 89.90,
-            categoria: "Protector solar",
-            piel: "Piel Sensible",
-            imagen: "/Img/Banner 2.png",
-            favorito: true
+            marca: "ANUA",
+            nombre: "Heartleaf 77% Soothing Toner",
+            categoria: "Tónico",
+            precio: "S/ 89.90",
+            imagen: "/Img/Anua.png",
+            favorito: true,
         },
         {
             id: 3,
-            nombre: "Heartleaf Toner",
-            marca: "Anua",
-            precio: 74.90,
-            categoria: "Tónico",
-            piel: "Piel Grasa/Mixta",
-            imagen: "/Img/Banner 3.png",
-            favorito: false
-        }
+            marca: "SKIN1004",
+            nombre: "Madagascar Centella Ampoule",
+            categoria: "Ampolla",
+            precio: "S/ 99.90",
+            imagen: "/Img/Skin1004.png",
+            favorito: false,
+        },
     ];
 
-    const productosRecomendados = pielSeleccionada
-        ? productos.filter(producto => producto.piel === pielSeleccionada)
-        : productos;
+    /* =========================================================
+       RUTINA K-BEAUTY
+       ========================================================= */
 
-
-    // =========================
-    // RUTINA
-    // =========================
-
-    const pasosRutina = [
+    const rutina = [
         {
             numero: "01",
-            titulo: "Limpia",
-            descripcion: "Elimina impurezas sin alterar la barrera de tu piel.",
-            icono: "🫧"
+            icono: "🫧",
+            titulo: "Limpieza",
+            descripcion: "Elimina impurezas y prepara tu piel.",
         },
         {
             numero: "02",
-            titulo: "Prepara",
-            descripcion: "Equilibra e hidrata tu piel para recibir los siguientes productos.",
-            icono: "💧"
+            icono: "💧",
+            titulo: "Tónico",
+            descripcion: "Equilibra e hidrata tu piel.",
         },
         {
             numero: "03",
-            titulo: "Trata",
-            descripcion: "Utiliza ingredientes específicos para las necesidades de tu piel.",
-            icono: "✨"
+            icono: "✨",
+            titulo: "Esencia",
+            descripcion: "Aporta hidratación y luminosidad.",
         },
         {
             numero: "04",
-            titulo: "Hidrata",
-            descripcion: "Mantén la hidratación y fortalece la barrera cutánea.",
-            icono: "🌸"
+            icono: "💗",
+            titulo: "Tratamiento",
+            descripcion: "Cuida necesidades específicas.",
         },
         {
             numero: "05",
-            titulo: "Protege",
-            descripcion: "Finaliza tu rutina con protección solar durante el día.",
-            icono: "☀️"
-        }
+            icono: "🧴",
+            titulo: "Hidratación",
+            descripcion: "Sella la hidratación y protege.",
+        },
     ];
 
+    /* =========================================================
+       RESEÑAS
+       ========================================================= */
 
-    // =========================
-    // RESEÑAS
-    // =========================
-
-    const reseñas = [
+    const resenas = [
         {
+            texto:
+                "Me encanta que puedo encontrar productos coreanos y además elegirlos según mi tipo de piel.",
             nombre: "Valeria",
             inicial: "V",
-            texto:
-                "Me encantó poder encontrar productos según mi tipo de piel. La página se siente mucho más personalizada.",
-            estrellas: 5
         },
         {
+            texto:
+                "La selección de productos está muy bien pensada. Mi rutina cambió completamente.",
             nombre: "Camila",
             inicial: "C",
-            texto:
-                "La selección de productos coreanos está muy bien organizada y la experiencia de compra es sencilla.",
-            estrellas: 5
         },
         {
+            texto:
+                "Seoul Glow tiene una estética preciosa y los productos que he probado me han encantado.",
             nombre: "Andrea",
             inicial: "A",
-            texto:
-                "La sección de rutinas me ayudó a entender qué productos necesitaba realmente.",
-            estrellas: 5
-        }
+        },
     ];
+
+    /* =========================================================
+       RENDER
+       ========================================================= */
+
     return (
-        <div className="seoul-glow-home">
-            {/* =========================================
-                HERO
-            ========================================= */}
+        <div className="home-page">
 
-    <section
-    className="hero-carousel"
-    style={{ backgroundImage: `url(${banners[bannerActual].image})` }}
->
-    <div className="hero-overlay" />
+            {/* =====================================================
+                HERO MODERNO
+                ===================================================== */}
 
-    <div className="hero-slide">
+            <section
+                className="hero-modern"
+                style={{
+                    backgroundImage: `url("${banners[bannerActual].image}")`,
+                }}
+            >
 
-        <div className="hero-content">
-            <span className="eyebrow-pill">
-                {banners[bannerActual].eyebrow}
-            </span>
+                <div className="hero-background-overlay"></div>
 
-            <h1>
-                {banners[bannerActual].title}
-                <br />
-                <em>{banners[bannerActual].highlight}</em>
-            </h1>
-
-            <p>{banners[bannerActual].description}</p>
-
-            <a href="#piel" className="cta-btn">
-                {banners[bannerActual].button}
-                <span>→</span>
-            </a>
-        </div>
-
-        <div className="hero-badges">
-            {beneficiosHero.map((b) => (
-                <div className="hero-badge" key={b.titulo}>
-                    <span>{b.icono}</span>
-                    <p>{b.titulo}</p>
-                </div>
-            ))}
-        </div>
-
-    </div>
-
-    <button className="hero-nav prev" onClick={anteriorBanner}>‹</button>
-    <button className="hero-nav next" onClick={siguienteBanner}>›</button>
-
-    <div className="hero-dots">
-        {banners.map((_, index) => (
-            <button
-                key={index}
-                className={bannerActual === index ? "active" : ""}
-                onClick={() => setBannerActual(index)}
-            />
-        ))}
-    </div>
-
-</section>
-
-
-            {/* =========================================
-                PROPUESTA DE VALOR
-            ========================================= */}
-
-            <section className="feature-carousel">
-
-                <div className="feature-slide">
-                    <span>🚚</span>
-                    <div>
-                        <strong>Envíos a todo el Perú</strong>
-                        <small>Rápidos y seguros</small>
-                    </div>
+                <div className="hero-decoration hero-decoration-one">
+                    ✦
                 </div>
 
-                <div className="feature-slide">
-                    <span>✓</span>
-                    <div>
-                        <strong>Productos originales</strong>
-                        <small>Marcas seleccionadas</small>
-                    </div>
+                <div className="hero-decoration hero-decoration-two">
+                    ✧
                 </div>
 
-                <div className="feature-slide">
-                    <span>🔒</span>
-                    <div>
-                        <strong>Compra segura</strong>
-                        <small>Tus datos protegidos</small>
-                    </div>
-                </div>
+                <div className="hero-glass">
 
-                <div className="feature-slide">
-                    <span>💬</span>
-                    <div>
-                        <strong>Atención personalizada</strong>
-                        <small>Estamos para ayudarte</small>
-                    </div>
-                </div>
+                    {/* HEADER */}
 
-            </section>
+                    <header className="hero-header">
 
+                        <a href="#" className="hero-logo">
+                            🌸 SEOUL GLOW
+                            <small>Korean Skincare</small>
+                        </a>
 
-            {/* =========================================
-                DESCUBRE TU TIPO DE PIEL
-            ========================================= */}
+                        <nav className="hero-menu">
+                            <a href="#productos">Productos</a>
+                            <a href="#piel">Tipos de piel</a>
+                            <a href="#rutinas">Rutinas</a>
+                            <a href="#favoritos">Favoritos</a>
+                            <a href="#ofertas">Ofertas</a>
+                            <a href="#nosotros">Sobre nosotros</a>
+                        </nav>
 
-            <section id="piel" className="skin-section">
-
-                <div className="wrap">
-
-                    <div className="section-title">
-
-                        <span className="tag">
-                            ✿ DESCUBRE TU RUTINA
-                        </span>
-
-                        <h2>
-                            ¿Qué necesita realmente
-                            <br />
-                            <em>tu piel?</em>
-                        </h2>
-
-                        <p>
-                            Selecciona tu tipo de piel y descubre
-                            productos que pueden formar parte de
-                            tu rutina.
-                        </p>
-
-                    </div>
-
-
-                    <div className="skin-grid">
-
-                        {tiposPiel.map((tipo) => (
+                        <div className="hero-actions">
 
                             <button
-                                key={tipo.nombre}
-                                className={
-                                    pielSeleccionada === tipo.nombre
-                                        ? "skin-card selected"
-                                        : "skin-card"
-                                }
-                                onClick={() =>
-                                    setPielSeleccionada(tipo.nombre)
-                                }
+                                type="button"
+                                aria-label="Buscar"
+                                className="hero-icon"
                             >
-
-                                <div className="skin-avatar">
-
-                                    <img
-                                        src={tipo.imagen}
-                                        alt={tipo.nombre}
-                                    />
-
-                                </div>
-
-                                <span>{tipo.nombre}</span>
-
+                                ⌕
                             </button>
 
+                            <button
+                                type="button"
+                                aria-label="Carrito"
+                                className="hero-icon cart-icon"
+                            >
+                                🛒
+                                <span>2</span>
+                            </button>
+
+                            <button
+                                type="button"
+                                aria-label="Menú"
+                                className="hero-icon menu-icon"
+                            >
+                                ☰
+                            </button>
+
+                        </div>
+
+                    </header>
+
+
+                    {/* CONTENIDO HERO */}
+
+                    <div className="hero-main">
+
+                        <div className="hero-copy">
+
+                            <span className="hero-eyebrow">
+                                {banners[bannerActual].eyebrow}
+                            </span>
+
+                            <h1>
+                                {banners[bannerActual].title}
+                                <br />
+                                <em>
+                                    {banners[bannerActual].highlight}
+                                </em>
+                            </h1>
+
+                            <p>
+                                {banners[bannerActual].description}
+                            </p>
+
+                            <div className="hero-buttons">
+
+                                <a
+                                    href="#productos"
+                                    className="hero-primary"
+                                >
+                                    {banners[bannerActual].button}
+
+                                    <span>→</span>
+                                </a>
+
+                                <a
+                                    href="#favoritos"
+                                    className="hero-secondary"
+                                >
+                                    Explorar favoritos
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        {/* BENEFICIOS */}
+
+                        <div className="hero-benefits">
+
+                            {beneficiosHero.map((beneficio) => (
+                                <div
+                                    className="hero-benefit"
+                                    key={beneficio.titulo}
+                                >
+
+                                    <span className="hero-benefit-icon">
+                                        {beneficio.icono}
+                                    </span>
+
+                                    <strong>
+                                        {beneficio.titulo}
+                                    </strong>
+
+                                </div>
+                            ))}
+
+                        </div>
+
+                    </div>
+
+
+                    {/* BARRA INFERIOR */}
+
+                    <div className="hero-bottom">
+
+                        {beneficios.map((beneficio) => (
+                            <div
+                                className="hero-bottom-item"
+                                key={beneficio.titulo}
+                            >
+
+                                <span className="hero-bottom-icon">
+                                    {beneficio.icono}
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        {beneficio.titulo}
+                                    </strong>
+
+                                    <small>
+                                        {beneficio.descripcion}
+                                    </small>
+                                </div>
+
+                            </div>
                         ))}
 
                     </div>
 
+                </div>
 
-                    {pielSeleccionada && (
 
-                        <div className="skin-result">
+                {/* FLECHAS */}
 
-                            <div>
+                <button
+                    className="modern-arrow left"
+                    onClick={anteriorBanner}
+                    aria-label="Banner anterior"
+                >
+                    ←
+                </button>
 
-                                <span className="tag">
-                                    RECOMENDADO PARA TI
-                                </span>
+                <button
+                    className="modern-arrow right"
+                    onClick={siguienteBanner}
+                    aria-label="Banner siguiente"
+                >
+                    →
+                </button>
 
-                                <h3>
-                                    Productos para {pielSeleccionada}
-                                </h3>
 
-                            </div>
+                {/* PUNTOS */}
 
-                            <button
-                                className="btn-outline"
-                                onClick={() => setPielSeleccionada(null)}
-                            >
-                                Ver todos
-                            </button>
+                <div className="modern-dots">
 
-                        </div>
-
-                    )}
+                    {banners.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setBannerActual(index)}
+                            className={
+                                bannerActual === index
+                                    ? "active"
+                                    : ""
+                            }
+                            aria-label={`Ir al banner ${index + 1}`}
+                        />
+                    ))}
 
                 </div>
 
             </section>
 
 
-            {/* =========================================
-                PRODUCTOS
-            ========================================= */}
+            {/* =====================================================
+                BENEFICIOS
+                ===================================================== */}
+
+            <section className="feature-modern">
+
+                {beneficios.map((beneficio) => (
+                    <div
+                        className="feature-modern-item"
+                        key={beneficio.titulo}
+                    >
+
+                        <span>
+                            {beneficio.icono}
+                        </span>
+
+                        <div>
+                            <strong>
+                                {beneficio.titulo}
+                            </strong>
+
+                            <small>
+                                {beneficio.descripcion}
+                            </small>
+                        </div>
+
+                    </div>
+                ))}
+
+            </section>
+
+
+            {/* =====================================================
+                TIPOS DE PIEL
+                ===================================================== */}
 
             <section
-                id="productos"
-                className="products-section"
+                className="skin-modern"
+                id="piel"
             >
 
-                <div className="wrap">
+                <div className="section-heading">
 
-                    <div className="prod-header">
+                    <span className="section-eyebrow">
+                        CUIDADO PERSONALIZADO
+                    </span>
+
+                    <h2>
+                        Conoce lo que
+                        <br />
+                        <em>tu piel necesita.</em>
+                    </h2>
+
+                    <p>
+                        Elige tu tipo de piel y descubre productos
+                        pensados para acompañar tu rutina.
+                    </p>
+
+                </div>
+
+
+                <div className="skin-modern-grid">
+
+                    {tiposPiel.map((tipo) => (
+
+                        <button
+                            key={tipo.nombre}
+                            className={`skin-modern-card ${
+                                pielSeleccionada === tipo.nombre
+                                    ? "selected"
+                                    : ""
+                            }`}
+                            onClick={() =>
+                                setPielSeleccionada(tipo.nombre)
+                            }
+                        >
+
+                            <div className="skin-modern-image">
+
+                                <img
+                                    src={tipo.imagen}
+                                    alt={tipo.nombre}
+                                />
+
+                            </div>
+
+                            <span>
+                                {tipo.nombre}
+                            </span>
+
+                            <small>
+                                Descubrir →
+                            </small>
+
+                        </button>
+
+                    ))}
+
+                </div>
+
+
+                {pielSeleccionada && (
+
+                    <div className="skin-selected">
 
                         <div>
 
-                            <span className="tag">
-                                LOS MÁS AMADOS 💗
+                            <span>
+                                TU SELECCIÓN
                             </span>
 
-                            <h2>
-                                {pielSeleccionada
-                                    ? `Favoritos para ${pielSeleccionada}`
-                                    : "Descubre tus nuevos favoritos"}
-                            </h2>
+                            <h3>
+                                Productos para {pielSeleccionada}
+                            </h3>
+
+                            <p>
+                                Hemos seleccionado opciones que pueden
+                                ayudarte a construir una rutina pensada
+                                para las necesidades de tu piel.
+                            </p>
 
                         </div>
 
-                        <a href="#">
-                            Ver todos →
+                        <a href="#productos">
+                            VER PRODUCTOS →
                         </a>
 
                     </div>
 
+                )}
 
-                    <div className="prod-grid">
-
-                        {productosRecomendados.map((producto) => (
-
-                            <article
-                                className="product-card"
-                                key={producto.id}
-                            >
-
-                                <div className="product-image">
-
-                                    {producto.favorito && (
-                                        <span className="favorite">
-                                            ♥
-                                        </span>
-                                    )}
-
-                                    <img
-                                        src={producto.imagen}
-                                        alt={producto.nombre}
-                                    />
-
-                                </div>
+            </section>
 
 
-                                <div className="product-info">
+            {/* =====================================================
+                PRODUCTOS
+                ===================================================== */}
 
-                                    <span className="product-brand">
-                                        {producto.marca}
-                                    </span>
+            <section
+                className="products-modern"
+                id="productos"
+            >
 
-                                    <h3>
-                                        {producto.nombre}
-                                    </h3>
+                <div className="products-heading">
 
-                                    <p>
-                                        {producto.categoria}
-                                    </p>
+                    <div>
 
-                                    <strong>
-                                        S/ {producto.precio.toFixed(2)}
-                                    </strong>
+                        <span className="section-eyebrow">
+                            FAVORITOS DE LA COMUNIDAD
+                        </span>
 
-                                    <button className="add-cart">
-                                        AGREGAR AL CARRITO
-                                    </button>
-
-                                </div>
-
-                            </article>
-
-                        ))}
+                        <h2>
+                            Los más
+                            <br />
+                            <em>amados.</em>
+                        </h2>
 
                     </div>
+
+                    <a href="#productos">
+                        VER TODOS LOS PRODUCTOS →
+                    </a>
+
+                </div>
+
+
+                <div className="product-modern-grid">
+
+                    {productos.map((producto) => (
+
+                        <article
+                            className="product-modern-card"
+                            key={producto.id}
+                        >
+
+                            <div className="product-modern-image">
+
+                                {producto.favorito && (
+                                    <span className="product-tag">
+                                        FAVORITO
+                                    </span>
+                                )}
+
+                                <button
+                                    className="product-heart"
+                                    aria-label="Agregar a favoritos"
+                                >
+                                    ♡
+                                </button>
+
+                                <img
+                                    src={producto.imagen}
+                                    alt={producto.nombre}
+                                />
+
+                                <button className="product-quick">
+                                    AGREGAR AL CARRITO
+                                </button>
+
+                            </div>
+
+
+                            <div className="product-modern-info">
+
+                                <span>
+                                    {producto.marca}
+                                </span>
+
+                                <h3>
+                                    {producto.nombre}
+                                </h3>
+
+                                <p>
+                                    {producto.categoria}
+                                </p>
+
+                                <strong>
+                                    {producto.precio}
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+                    ))}
 
                 </div>
 
             </section>
 
 
-            {/* =========================================
-                RUTINA K-BEAUTY
-            ========================================= */}
+            {/* =====================================================
+                RUTINA
+                ===================================================== */}
 
             <section
-                id="rutina"
-                className="routine-section"
+                className="routine-modern"
+                id="rutinas"
             >
 
-                <div className="wrap">
+                <div className="routine-modern-inner">
 
-                    <div className="routine-heading">
+                    <div className="routine-modern-heading">
 
-                        <span className="tag">
-                            EL RITUAL COREANO
+                        <span className="section-eyebrow">
+                            K-BEAUTY ROUTINE
                         </span>
 
                         <h2>
-                            Tu rutina,
+                            El secreto está
                             <br />
-                            <em>paso a paso.</em>
+                            <em>en la rutina.</em>
                         </h2>
 
                         <p>
-                            El secreto no está en tener cientos
-                            de productos. Está en saber cuáles
-                            necesita tu piel y cuándo utilizarlos.
+                            Descubre los pasos esenciales de una rutina
+                            coreana y crea un momento especial para tu piel.
                         </p>
 
                     </div>
 
 
-                    <div className="routine-grid">
+                    <div className="routine-modern-grid">
 
-                        {pasosRutina.map((paso) => (
+                        {rutina.map((paso) => (
 
-                            <div
-                                className="routine-card"
+                            <article
+                                className="routine-modern-card"
                                 key={paso.numero}
                             >
 
@@ -544,107 +738,6 @@ function Home() {
                                     {paso.descripcion}
                                 </p>
 
-                            </div>
-
-                        ))}
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            {/* =========================================
-                TIENDA
-            ========================================= */}
-
-            <section
-                id="tiendas"
-                className="locator"
-            >
-
-                <div>
-
-                    <span className="tag">
-                        SEOUL GLOW CERCA DE TI
-                    </span>
-
-                    <h2>
-                        Tu próximo
-                        <br />
-                        <em>ritual comienza aquí.</em>
-                    </h2>
-
-                    <p>
-                        Encuentra nuestra tienda más cercana
-                        y descubre tus productos favoritos.
-                    </p>
-
-                </div>
-
-                <button className="cta-btn">
-                    ENCONTRAR TIENDA →
-                </button>
-
-            </section>
-
-
-            {/* =========================================
-                RESEÑAS
-            ========================================= */}
-
-            <section
-                id="reviews"
-                className="reviews-full"
-            >
-
-                <div className="wrap">
-
-                    <div className="section-title">
-
-                        <span className="tag">
-                            LO QUE DICE NUESTRA COMUNIDAD 💕
-                        </span>
-
-                        <h2>
-                            Pieles reales.
-                            <br />
-                            <em>Historias reales.</em>
-                        </h2>
-
-                    </div>
-
-
-                    <div className="review-grid">
-
-                        {reseñas.map((reseña) => (
-
-                            <article
-                                className="review-card"
-                                key={reseña.nombre}
-                            >
-
-                                <div className="review-stars">
-                                    {"★".repeat(reseña.estrellas)}
-                                </div>
-
-                                <p>
-                                    "{reseña.texto}"
-                                </p>
-
-                                <div className="review-user">
-
-                                    <span>
-                                        {reseña.inicial}
-                                    </span>
-
-                                    <strong>
-                                        {reseña.nombre}
-                                    </strong>
-
-                                </div>
-
                             </article>
 
                         ))}
@@ -656,47 +749,291 @@ function Home() {
             </section>
 
 
-            {/* =========================================
-                NEWSLETTER
-            ========================================= */}
+            {/* =====================================================
+                LOCALIZADOR
+                ===================================================== */}
 
-            <section className="newsletter">
+            <section className="store-modern">
 
-                <div className="wrap">
+                <div className="store-modern-content">
 
-                    <span className="tag">
-                        STAY GLOWING ✨
+                    <span className="section-eyebrow">
+                        ENCUÉNTRANOS
                     </span>
 
                     <h2>
-                        Un poquito de Corea
+                        Tu skincare
                         <br />
-                        <em>en tu inbox.</em>
+                        <em>más cerca de ti.</em>
                     </h2>
 
                     <p>
-                        Recibe novedades, lanzamientos,
-                        descuentos y consejos para cuidar tu piel.
+                        Visita nuestras tiendas y descubre tus productos
+                        favoritos de Seoul Glow.
                     </p>
 
-                    <div className="nl-form">
+                    <button>
+                        ENCONTRAR UNA TIENDA →
+                    </button>
 
-                        <input
-                            type="email"
-                            placeholder="Tu correo electrónico"
-                        />
+                </div>
 
-                        <button>
-                            QUIERO MI GLOW
-                        </button>
+                <div className="store-modern-visual">
+                    📍
+                </div>
+
+            </section>
+
+
+            {/* =====================================================
+                RESEÑAS
+                ===================================================== */}
+
+            <section
+                className="reviews-modern"
+                id="favoritos"
+            >
+
+                <div className="section-heading">
+
+                    <span className="section-eyebrow">
+                        AMADOS POR NUESTRA COMUNIDAD
+                    </span>
+
+                    <h2>
+                        Lo que dicen
+                        <br />
+                        <em>de Seoul Glow.</em>
+                    </h2>
+
+                </div>
+
+
+                <div className="reviews-modern-grid">
+
+                    {resenas.map((resena) => (
+
+                        <article
+                            className="review-modern-card"
+                            key={resena.nombre}
+                        >
+
+                            <div className="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                “{resena.texto}”
+                            </p>
+
+                            <div className="review-person">
+
+                                <span>
+                                    {resena.inicial}
+                                </span>
+
+                                <strong>
+                                    {resena.nombre}
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+                    ))}
+
+                </div>
+
+            </section>
+
+
+            {/* =====================================================
+                NEWSLETTER
+                ===================================================== */}
+
+            <section
+                className="newsletter-modern"
+                id="ofertas"
+            >
+
+                <span className="section-eyebrow">
+                    SEUL GLOW LETTER
+                </span>
+
+                <h2>
+                    Un poco de glow
+                    <br />
+                    <em>en tu bandeja.</em>
+                </h2>
+
+                <p>
+                    Recibe novedades, recomendaciones de skincare,
+                    lanzamientos y ofertas especiales.
+                </p>
+
+                <form
+                    className="newsletter-form"
+                    onSubmit={(e) => e.preventDefault()}
+                >
+
+                    <input
+                        type="email"
+                        placeholder="Tu correo electrónico"
+                        aria-label="Correo electrónico"
+                    />
+
+                    <button type="submit">
+                        SUSCRIBIRME
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            {/* =====================================================
+                FOOTER
+                ===================================================== */}
+
+            <footer
+                className="footer-modern"
+                id="nosotros"
+            >
+
+                <div className="footer-modern-grid">
+
+                    <div className="footer-brand">
+
+                        <a href="#" className="footer-logo">
+                            🌸 SEOUL GLOW
+                            <small>
+                                Korean Skincare
+                            </small>
+                        </a>
+
+                        <p>
+                            Skincare coreano seleccionado para
+                            acompañarte a descubrir tu mejor piel.
+                        </p>
+
+                        <div className="footer-socials">
+
+                            <a href="#" aria-label="Instagram">
+                                ◎
+                            </a>
+
+                            <a href="#" aria-label="TikTok">
+                                ♪
+                            </a>
+
+                            <a href="#" aria-label="Facebook">
+                                f
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            COMPRAR
+                        </h4>
+
+                        <ul>
+                            <li>
+                                Productos
+                            </li>
+
+                            <li>
+                                Tipos de piel
+                            </li>
+
+                            <li>
+                                Rutinas
+                            </li>
+
+                            <li>
+                                Ofertas
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            AYUDA
+                        </h4>
+
+                        <ul>
+                            <li>
+                                Envíos
+                            </li>
+
+                            <li>
+                                Cambios y devoluciones
+                            </li>
+
+                            <li>
+                                Preguntas frecuentes
+                            </li>
+
+                            <li>
+                                Contáctanos
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            SEOUL GLOW
+                        </h4>
+
+                        <ul>
+                            <li>
+                                Sobre nosotros
+                            </li>
+
+                            <li>
+                                Nuestras tiendas
+                            </li>
+
+                            <li>
+                                Blog
+                            </li>
+
+                            <li>
+                                Términos y condiciones
+                            </li>
+                        </ul>
 
                     </div>
 
                 </div>
 
-            </section>
-             </div>
-              );
+
+                <div className="footer-bottom">
+
+                    <span>
+                        © 2026 Seoul Glow. Todos los derechos reservados.
+                    </span>
+
+                    <span>
+                        Korean Skincare · Lima, Perú
+                    </span>
+
+                </div>
+
+            </footer>
+
+        </div>
+    );
 }
 
 export default Home;
