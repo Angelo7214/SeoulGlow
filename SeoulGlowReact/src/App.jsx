@@ -33,7 +33,10 @@ function App() {
 
     return (
         <div>
-            <Header setPaginaActual={setPaginaActual} />
+            <Header
+                paginaActual={paginaActual}
+                setPaginaActual={setPaginaActual}
+            />
             {renderPagina()}
             <Footer />
         </div>
