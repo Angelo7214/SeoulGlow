@@ -110,15 +110,15 @@ function Header({ paginaActual, setPaginaActual }) {
 
                     <header className="hero-header">
 
-                        
+                        <a
                             href="#"
                             className="hero-logo"
                             onClick={(e) => { e.preventDefault(); setPaginaActual("home"); }}
-                        <a>
+                        >
                             🌸 SEOUL GLOW
                             <small>Korean Skincare</small>
                         </a>
-
+    
                         <nav className="hero-menu">
                             <a onClick={() => setPaginaActual("productos")}>Productos</a>
                             <a onClick={() => setPaginaActual("home")} href="#piel">Tipos de piel</a>
@@ -170,11 +170,11 @@ function Header({ paginaActual, setPaginaActual }) {
                                     <span>→</span>
                                 </a>
 
-                                
+                                <a
                                     href="#favoritos"
                                     className="hero-secondary"
                                     onClick={() => setPaginaActual("home")}
-                                <a>
+                                >
                                     Explorar favoritos
                                 </a>
                             </div>
