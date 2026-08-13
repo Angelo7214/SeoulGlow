@@ -84,7 +84,7 @@ function Home() {
             nombre: "Advanced Snail 96 Mucin Power Essence",
             categoria: "Esencia",
             precio: "S/ 79.90",
-            imagen: "../Img/ANUA HIDRATANTE.png",
+            imagen: "/Img/COSRX LIMPIADOR 2.png",
             favorito: true,
         },
         {
@@ -93,7 +93,7 @@ function Home() {
             nombre: "Heartleaf 77% Soothing Toner",
             categoria: "Tónico",
             precio: "S/ 89.90",
-            imagen: "../Img/ANUA TONIC.png",
+            imagen: "/Img/ANUA TONIC.png",
             favorito: true,
         },
         {
@@ -102,7 +102,7 @@ function Home() {
             nombre: "Madagascar Centella Ampoule",
             categoria: "Ampolla",
             precio: "S/ 99.90",
-            imagen: "../Img/Skin1004.png",
+            imagen: "/Img/Skin1004.png",
             favorito: false,
         },
     ];

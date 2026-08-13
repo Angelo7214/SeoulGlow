@@ -124,6 +124,7 @@ function Header({ paginaActual, setPaginaActual }) {
                             <a onClick={() => setPaginaActual("home")} href="#piel">Tipos de piel</a>
                             <a onClick={() => setPaginaActual("rutinas")}>Rutinas</a>
                             <a onClick={() => setPaginaActual("nosotros")}>Sobre nosotros</a>
+                            <a onClick={() => setPaginaActual("cuenta")}>Mi cuenta</a>
                         </nav>
 
                         <div className="hero-actions">
