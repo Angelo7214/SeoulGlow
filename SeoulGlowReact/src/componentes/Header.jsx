@@ -56,7 +56,7 @@ const heroPorPagina = {
                 highlight: "Seoul Glow.",
                 description: "Así nació nuestra pasión por el K-Beauty.",
                 button: "DESCUBRIR MÁS",
-                image: "/Img/Imagen fondo 5.png",
+                image: "/Img/Imagen fondo 6.png",
             },
         ],
     },
@@ -68,7 +68,7 @@ const heroPorPagina = {
                 highlight: "rutinas.",
                 description: "Aprende a construir tu rutina ideal paso a paso.",
                 button: "VER RUTINAS",
-                image: "/Img/Imagen fondo 6.png",
+                image: "/Img/Imagen fondo 5.png",
             },
         ],
     },
@@ -123,8 +123,6 @@ function Header({ paginaActual, setPaginaActual }) {
                             <a onClick={() => setPaginaActual("productos")}>Productos</a>
                             <a onClick={() => setPaginaActual("home")} href="#piel">Tipos de piel</a>
                             <a onClick={() => setPaginaActual("rutinas")}>Rutinas</a>
-                            <a onClick={() => setPaginaActual("home")} href="#favoritos">Favoritos</a>
-                            <a onClick={() => setPaginaActual("home")} href="#ofertas">Ofertas</a>
                             <a onClick={() => setPaginaActual("nosotros")}>Sobre nosotros</a>
                         </nav>
 
