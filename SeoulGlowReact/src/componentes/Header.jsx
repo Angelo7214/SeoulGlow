@@ -147,7 +147,7 @@ function Header({ paginaActual, setPaginaActual }) {
                             </button>
 
                         </div>
-
+                    
                     </header>
 
                     <div className="hero-main">
