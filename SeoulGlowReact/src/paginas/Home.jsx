@@ -1,61 +1,77 @@
 import { useState } from "react";
 function Home() {
-
-    const beneficios = [
-        {
-            icono: "🚚",
-            titulo: "Envíos a todo el Perú",
-            descripcion: "Rápidos y seguros",
-        },
-        {
-            icono: "✓",
-            titulo: "Productos originales",
-            descripcion: "Marcas seleccionadas",
-        },
-        {
-            icono: "🔒",
-            titulo: "Compra segura",
-            descripcion: "Tus datos protegidos",
-        },
-        {
-            icono: "💬",
-            titulo: "Atención personalizada",
-            descripcion: "Estamos para ayudarte",
-        },
-    ];
-
     /* =========================================================
        TIPOS DE PIEL
        ========================================================= */
-
-    const tiposPiel = [
+ const tiposPiel = [
         {
             nombre: "Piel seca",
             imagen: "/Img/Piel seca.png",
+            descripcion:
+                "Necesita hidratación profunda, nutrición y productos que ayuden a mantener la barrera natural de la piel.",
+            etiqueta: "HIDRATACIÓN INTENSA",
         },
         {
             nombre: "Piel grasa",
             imagen: "/Img/Piel grasa.png",
+            descripcion:
+                "Busca fórmulas ligeras que ayuden a controlar el exceso de sebo sin dejar una sensación pesada.",
+            etiqueta: "EQUILIBRIO Y FRESCURA",
         },
         {
             nombre: "Piel mixta",
             imagen: "/Img/Piel mixta.png",
+            descripcion:
+                "Combina diferentes necesidades. Lo ideal es equilibrar las zonas grasas y mantener hidratadas las zonas secas.",
+            etiqueta: "EQUILIBRIO INTELIGENTE",
         },
         {
             nombre: "Piel sensible",
             imagen: "/Img/Piel sensible.png",
+            descripcion:
+                "Necesita fórmulas suaves que ayuden a cuidar la piel y mantener una sensación de confort durante el día.",
+            etiqueta: "CALMA Y CONFORT",
         },
         {
             nombre: "Piel normal",
             imagen: "/Img/Piel normal.png",
+            descripcion:
+                "Mantén su equilibrio natural con una rutina sencilla enfocada en hidratación, protección y luminosidad.",
+            etiqueta: "CUIDADO DIARIO",
         },
         {
             nombre: "Piel madura",
             imagen: "/Img/Piel madura.png",
+            descripcion:
+                "Una rutina enfocada en hidratación, nutrición y luminosidad puede ayudar a cuidar la apariencia de la piel.",
+            etiqueta: "NUTRICIÓN Y LUMINOSIDAD",
         },
     ];
 
-    const [pielSeleccionada, setPielSeleccionada] = useState("");
+    const [pielActual, setPielActual] = useState(0);
+
+    const piel = tiposPiel[pielActual];
+
+    /* =========================================================
+       CAMBIAR TIPO DE PIEL
+       ========================================================= */
+
+    const siguientePiel = () => {
+        setPielActual((actual) =>
+            actual === tiposPiel.length - 1 ? 0 : actual + 1
+        );
+    };
+
+    const anteriorPiel = () => {
+        setPielActual((actual) =>
+            actual === 0 ? tiposPiel.length - 1 : actual - 1
+        );
+    };
+
+    const seleccionarPiel = (indice) => {
+        setPielActual(indice);
+    };
+
 
     /* =========================================================
        PRODUCTOS
@@ -68,7 +84,7 @@ function Home() {
             nombre: "Advanced Snail 96 Mucin Power Essence",
             categoria: "Esencia",
             precio: "S/ 79.90",
-            imagen: "/Img/COSRX.png",
+            imagen: "../Img/ANUA HIDRATANTE.png",
             favorito: true,
         },
         {
@@ -77,7 +93,7 @@ function Home() {
             nombre: "Heartleaf 77% Soothing Toner",
             categoria: "Tónico",
             precio: "S/ 89.90",
-            imagen: "/Img/Anua.png",
+            imagen: "../Img/ANUA TONIC.png",
             favorito: true,
         },
         {
@@ -86,7 +102,7 @@ function Home() {
             nombre: "Madagascar Centella Ampoule",
             categoria: "Ampolla",
             precio: "S/ 99.90",
-            imagen: "/Img/Skin1004.png",
+            imagen: "../Img/Skin1004.png",
             favorito: false,
         },
     ];
@@ -152,144 +168,160 @@ function Home() {
             inicial: "A",
         },
     ];
-
-    /* =========================================================
-       RENDER
-       ========================================================= */
-
     return (
         <div className="home-page">
-
-            {/* =====================================================
-                BENEFICIOS
-                ===================================================== */}
-
-            <section className="feature-modern">
-
-                {beneficios.map((beneficio) => (
-                    <div
-                        className="feature-modern-item"
-                        key={beneficio.titulo}
-                    >
-
-                        <span>
-                            {beneficio.icono}
-                        </span>
-
-                        <div>
-                            <strong>
-                                {beneficio.titulo}
-                            </strong>
-
-                            <small>
-                                {beneficio.descripcion}
-                            </small>
-                        </div>
-
-                    </div>
-                ))}
-
-            </section>
-
-
             {/* =====================================================
                 TIPOS DE PIEL
                 ===================================================== */}
 
-            <section
-                className="skin-modern"
-                id="piel"
-            >
+            <section className="skin-modern" id="piel">
 
-                <div className="section-heading">
+                <div className="skin-experience">
 
-                    <span className="section-eyebrow">
-                        CUIDADO PERSONALIZADO
-                    </span>
+                    {/* DECORACIÓN */}
 
-                    <h2>
-                        Conoce lo que
-                        <br />
-                        <em>tu piel necesita.</em>
-                    </h2>
+                    <div className="skin-glow skin-glow-one"></div>
+                    <div className="skin-glow skin-glow-two"></div>
 
-                    <p>
-                        Elige tu tipo de piel y descubre productos
-                        pensados para acompañar tu rutina.
-                    </p>
+                    {/* CABECERA */}
 
-                </div>
+                    <div className="skin-experience-heading">
 
+                        <span className="section-eyebrow">
+                            CUIDADO PERSONALIZADO
+                        </span>
 
-                <div className="skin-modern-grid">
+                        <h2>
+                            Conoce lo que
+                            <br />
+                            <em>tu piel necesita.</em>
+                        </h2>
 
-                    {tiposPiel.map((tipo) => (
+                        <p>
+                            Descubre el cuidado que mejor acompaña las
+                            necesidades de tu piel.
+                        </p>
 
-                        <button
-                            key={tipo.nombre}
-                            className={`skin-modern-card ${
-                                pielSeleccionada === tipo.nombre
-                                    ? "selected"
-                                    : ""
-                            }`}
-                            onClick={() =>
-                                setPielSeleccionada(tipo.nombre)
-                            }
-                        >
+                    </div>
 
-                            <div className="skin-modern-image">
+                    {/* TARJETA PRINCIPAL */}
+
+                    <div className="skin-showcase">
+
+                        {/* INFORMACIÓN */}
+
+                        <div className="skin-showcase-content">
+
+                            <div className="skin-counter">
+                                <span>
+                                    {String(pielActual + 1).padStart(2, "0")}
+                                </span>
+
+                                <div></div>
+
+                                <small>
+                                    {String(tiposPiel.length).padStart(2, "0")}
+                                </small>
+                            </div>
+
+                            <span className="skin-label">
+                                {piel.etiqueta}
+                            </span>
+
+                            <h3>
+                                {piel.nombre}
+                            </h3>
+
+                            <p>
+                                {piel.descripcion}
+                            </p>
+
+                            <a
+                                href="#productos"
+                                className="skin-product-button"
+                            >
+                                DESCUBRIR PRODUCTOS
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                        {/* IMAGEN */}
+
+                        <div className="skin-showcase-visual">
+
+                            <div className="skin-image-aura"></div>
+
+                            <div className="skin-image-frame">
 
                                 <img
-                                    src={tipo.imagen}
-                                    alt={tipo.nombre}
+                                    key={piel.imagen}
+                                    src={piel.imagen}
+                                    alt={piel.nombre}
                                 />
 
                             </div>
 
-                            <span>
-                                {tipo.nombre}
-                            </span>
-
-                            <small>
-                                Descubrir →
-                            </small>
-
-                        </button>
-
-                    ))}
-
-                </div>
-
-
-                {pielSeleccionada && (
-
-                    <div className="skin-selected">
-
-                        <div>
-
-                            <span>
-                                TU SELECCIÓN
-                            </span>
-
-                            <h3>
-                                Productos para {pielSeleccionada}
-                            </h3>
-
-                            <p>
-                                Hemos seleccionado opciones que pueden
-                                ayudarte a construir una rutina pensada
-                                para las necesidades de tu piel.
-                            </p>
+                            <div className="skin-floating-card">
+                                <span>SEUL GLOW</span>
+                                <strong>
+                                    Tu piel,
+                                    <br />
+                                    tu ritual.
+                                </strong>
+                            </div>
 
                         </div>
 
-                        <a href="#productos">
-                            VER PRODUCTOS →
-                        </a>
+                        {/* FLECHAS */}
+
+                        <button
+                            className="skin-arrow skin-arrow-left"
+                            onClick={anteriorPiel}
+                            aria-label="Piel anterior"
+                        >
+                            ←
+                        </button>
+
+                        <button
+                            className="skin-arrow skin-arrow-right"
+                            onClick={siguientePiel}
+                            aria-label="Siguiente piel"
+                        >
+                            →
+                        </button>
 
                     </div>
 
-                )}
+                    {/* SELECTOR INFERIOR */}
+
+                    <div className="skin-selector">
+
+                        {tiposPiel.map((tipo, indice) => (
+
+                            <button
+                                key={tipo.nombre}
+                                className={`skin-selector-item ${
+                                    pielActual === indice ? "active" : ""
+                                }`}
+                                onClick={() => seleccionarPiel(indice)}
+                            >
+
+                                <span className="skin-selector-number">
+                                    {String(indice + 1).padStart(2, "0")}
+                                </span>
+
+                                <span className="skin-selector-name">
+                                    {tipo.nombre.replace("Piel ", "")}
+                                </span>
+
+                            </button>
+
+                        ))}
+
+                    </div>
+
+                </div>
 
             </section>
 

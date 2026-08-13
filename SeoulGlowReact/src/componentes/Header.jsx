@@ -1,9 +1,3 @@
-import { useState, useEffect } from "react";
-
-/* =========================================================
-   CONTENIDO DEL HERO POR PÁGINA
-   ========================================================= */
-
 const heroPorPagina = {
     home: {
         banners: [
@@ -15,24 +9,6 @@ const heroPorPagina = {
                 button: "DESCUBRIR PRODUCTOS",
                 buttonLink: "#productos",
                 image: "/Img/Banner 2.png",
-            },
-            {
-                eyebrow: "K-Beauty para ti",
-                title: "Cuida tu piel,",
-                highlight: "conoce tu glow.",
-                description: "Encuentra productos seleccionados para crear una rutina de skincare que realmente disfrutes.",
-                button: "EXPLORAR COLECCIÓN",
-                buttonLink: "#favoritos",
-                image: "/Img/Banner 1.png",
-            },
-            {
-                eyebrow: "Belleza coreana",
-                title: "Una rutina que",
-                highlight: "tu piel agradecerá.",
-                description: "Ingredientes innovadores, fórmulas efectivas y el mejor cuidado inspirado en Corea.",
-                button: "VER FAVORITOS",
-                buttonLink: "#favoritos",
-                image: "/Img/Banner 3.png",
             },
         ],
     },
@@ -98,10 +74,6 @@ const heroPorPagina = {
     },
 };
 
-/* =========================================================
-   BENEFICIOS FIJOS (iguales en todas las páginas)
-   ========================================================= */
-
 const beneficiosHero = [
     { icono: "🌿", titulo: "Ingredientes naturales" },
     { icono: "💧", titulo: "Testado dermatológicamente" },
@@ -109,63 +81,10 @@ const beneficiosHero = [
     { icono: "🧴", titulo: "Fórmulas limpias" },
 ];
 
-const beneficios = [
-    { icono: "🚚", titulo: "Envíos a todo el Perú", descripcion: "Rápidos y seguros" },
-    { icono: "✓", titulo: "Productos originales", descripcion: "Marcas seleccionadas" },
-    { icono: "🔒", titulo: "Compra segura", descripcion: "Tus datos protegidos" },
-    { icono: "💬", titulo: "Atención personalizada", descripcion: "Estamos para ayudarte" },
-];
-
 function Header({ paginaActual, setPaginaActual }) {
 
     const paginaHero = heroPorPagina[paginaActual] || heroPorPagina.home;
-    const banners = paginaHero.banners;
-
-    const [bannerActual, setBannerActual] = useState(0);
-
-    useEffect(() => {
-        setBannerActual(0);
-    }, [paginaActual]);
-
-    const bannerData = banners[bannerActual] || banners[0];
-
-    const [capas, setCapas] = useState([
-        { imagen: bannerData.image, activa: true },
-        { imagen: bannerData.image, activa: false },
-    ]);
-
-    useEffect(() => {
-        setCapas((prev) => {
-            const indiceActiva = prev.findIndex((c) => c.activa);
-            if (prev[indiceActiva].imagen === bannerData.image) return prev;
-
-            const indiceInactiva = indiceActiva === 0 ? 1 : 0;
-            const nuevo = [...prev];
-            nuevo[indiceInactiva] = { imagen: bannerData.image, activa: false };
-            return nuevo;
-        });
-
-        const timeout = setTimeout(() => {
-            setCapas((prev) => {
-                const indiceActiva = prev.findIndex((c) => c.activa);
-                const indiceInactiva = indiceActiva === 0 ? 1 : 0;
-                return prev.map((capa, i) => ({
-                    ...capa,
-                    activa: i === indiceInactiva,
-                }));
-            });
-        }, 30);
-
-        return () => clearTimeout(timeout);
-    }, [bannerData.image]);
-
-    const siguienteBanner = () => {
-        setBannerActual((actual) => (actual === banners.length - 1 ? 0 : actual + 1));
-    };
-
-    const anteriorBanner = () => {
-        setBannerActual((actual) => (actual === 0 ? banners.length - 1 : actual - 1));
-    };
+    const bannerData = paginaHero.banners[0]; // fijo, sin rotación
 
     return (
         <>
@@ -177,13 +96,10 @@ function Header({ paginaActual, setPaginaActual }) {
 
             <section className="hero-modern">
 
-                {capas.map((capa, i) => (
-                    <div
-                        key={i}
-                        className={`hero-bg-layer ${capa.activa ? "active" : ""}`}
-                        style={{ backgroundImage: `url("${capa.imagen}")` }}
-                    />
-                ))}
+                <div
+                    className="hero-bg-layer active"
+                    style={{ backgroundImage: `url("${bannerData.image}")` }}
+                />
 
                 <div className="hero-background-overlay"></div>
 
@@ -194,11 +110,11 @@ function Header({ paginaActual, setPaginaActual }) {
 
                     <header className="hero-header">
 
-                        <a
+                        
                             href="#"
                             className="hero-logo"
                             onClick={(e) => { e.preventDefault(); setPaginaActual("home"); }}
-                        >
+                        <a>
                             🌸 SEOUL GLOW
                             <small>Korean Skincare</small>
                         </a>
@@ -256,64 +172,29 @@ function Header({ paginaActual, setPaginaActual }) {
                                     <span>→</span>
                                 </a>
 
-                                <a
+                                
                                     href="#favoritos"
                                     className="hero-secondary"
                                     onClick={() => setPaginaActual("home")}
-                                >
+                                <a>
                                     Explorar favoritos
                                 </a>
                             </div>
 
                         </div>
 
-                        <div className="hero-benefits">
-                            {beneficiosHero.map((beneficio) => (
-                                <div className="hero-benefit" key={beneficio.titulo}>
-                                    <span className="hero-benefit-icon">{beneficio.icono}</span>
-                                    <strong>{beneficio.titulo}</strong>
-                                </div>
-                            ))}
-                        </div>
-
                     </div>
 
                     <div className="hero-bottom">
-                        {beneficios.map((beneficio) => (
+                        {beneficiosHero.map((beneficio) => (
                             <div className="hero-bottom-item" key={beneficio.titulo}>
                                 <span className="hero-bottom-icon">{beneficio.icono}</span>
-                                <div>
-                                    <strong>{beneficio.titulo}</strong>
-                                    <small>{beneficio.descripcion}</small>
-                                </div>
+                                <strong>{beneficio.titulo}</strong>
                             </div>
                         ))}
                     </div>
 
                 </div>
-
-                {banners.length > 1 && (
-                    <>
-                        <button className="modern-arrow left" onClick={anteriorBanner} aria-label="Banner anterior">
-                            ←
-                        </button>
-
-                        <button className="modern-arrow right" onClick={siguienteBanner} aria-label="Banner siguiente">
-                            →
-                        </button>
-
-                        <div className="modern-dots">
-                            {banners.map((_, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => setBannerActual(index)}
-                                    className={bannerActual === index ? "active" : ""}
-                                    aria-label={`Ir al banner ${index + 1}`}
-                                />
-                            ))}
-                        </div>
-                    </>
-                )}
 
             </section>
         </>
