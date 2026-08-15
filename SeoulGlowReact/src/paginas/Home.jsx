@@ -51,22 +51,7 @@ function Home() {
     const [pielActual, setPielActual] = useState(0);
 
     const piel = tiposPiel[pielActual];
-
-    /* =========================================================
-       CAMBIAR TIPO DE PIEL
-       ========================================================= */
-
-    const siguientePiel = () => {
-        setPielActual((actual) =>
-            actual === tiposPiel.length - 1 ? 0 : actual + 1
-        );
-    };
-
-    const anteriorPiel = () => {
-        setPielActual((actual) =>
-            actual === 0 ? tiposPiel.length - 1 : actual - 1
-        );
-    };
+    const [modalAbierto, setModalAbierto] = useState(false);
 
     const seleccionarPiel = (indice) => {
         setPielActual(indice);
@@ -183,147 +168,122 @@ function Home() {
                     <div className="skin-glow skin-glow-one"></div>
                     <div className="skin-glow skin-glow-two"></div>
 
-                    {/* CABECERA */}
+            {/* MENÚ DE CATEGORÍAS — ahora arriba */}
+            <div className="skin-selector">
+            {tiposPiel.map((tipo, indice) => (
+                <button
+                    key={tipo.nombre}
+                    className={`skin-selector-item ${
+                        pielActual === indice ? "active" : ""
+                    }`}
+                    onClick={() => seleccionarPiel(indice)}
+                >
+                    <span className="skin-selector-number">
+                        {String(indice + 1).padStart(2, "0")}
+                    </span>
+                    <span className="skin-selector-name">
+                        {tipo.nombre.replace("Piel ", "")}
+                    </span>
+                </button>
+                ))}
+             </div>
 
-                    <div className="skin-experience-heading">
+            <div className="skin-experience-heading">
+            <span className="section-eyebrow">CUIDADO PERSONALIZADO</span>
+            <h2>
+                Conoce lo que
+                <br />
+                <em>tu piel necesita.</em>
+            </h2>
+            <p>
+                Descubre el cuidado que mejor acompaña las necesidades de tu piel.
+            </p>
+            </div>
 
-                        <span className="section-eyebrow">
-                            CUIDADO PERSONALIZADO
-                        </span>
+        {/* CONTENIDO PRINCIPAL */}
+        <div className="skin-showcase">
 
-                        <h2>
-                            Conoce lo que
-                            <br />
-                            <em>tu piel necesita.</em>
-                        </h2>
+            <div className="skin-showcase-content">
 
-                        <p>
-                            Descubre el cuidado que mejor acompaña las
-                            necesidades de tu piel.
-                        </p>
+                <div className="skin-counter">
+                    <span>{String(pielActual + 1).padStart(2, "0")}</span>
+                    <div></div>
+                    <small>{String(tiposPiel.length).padStart(2, "0")}</small>
+                </div>
 
-                    </div>
+                <button
+                    className="skin-subtitle-trigger"
+                    onClick={() => setModalAbierto(true)}
+                >
+                    <h3>{piel.nombre}</h3>
+                    <span className="skin-subtitle-hint">Ver recomendación ⓘ</span>
+                </button>
 
-                    {/* TARJETA PRINCIPAL */}
+                <a href="#productos" className="skin-product-button">
+                    DESCUBRIR PRODUCTOS
+                    <span>→</span>
+                </a>
 
-                    <div className="skin-showcase">
-
-                        {/* INFORMACIÓN */}
-
-                        <div className="skin-showcase-content">
-
-                            <div className="skin-counter">
-                                <span>
-                                    {String(pielActual + 1).padStart(2, "0")}
-                                </span>
-
-                                <div></div>
-
-                                <small>
-                                    {String(tiposPiel.length).padStart(2, "0")}
-                                </small>
-                            </div>
-
-                            <span className="skin-label">
-                                {piel.etiqueta}
-                            </span>
-
-                            <h3>
-                                {piel.nombre}
-                            </h3>
-
-                            <p>
-                                {piel.descripcion}
-                            </p>
-
-                            <a
-                                href="#productos"
-                                className="skin-product-button"
-                            >
-                                DESCUBRIR PRODUCTOS
-                                <span>→</span>
-                            </a>
-
-                        </div>
+                </div>
 
                         {/* IMAGEN */}
 
                         <div className="skin-showcase-visual">
 
-                            <div className="skin-image-aura"></div>
+                <div className="skin-image-aura"></div>
 
-                            <div className="skin-image-frame">
-
-                                <img
-                                    key={piel.imagen}
-                                    src={piel.imagen}
-                                    alt={piel.nombre}
-                                />
-
-                            </div>
-
-                            <div className="skin-floating-card">
-                                <span>SEUL GLOW</span>
-                                <strong>
-                                    Tu piel,
-                                    <br />
-                                    tu ritual.
-                                </strong>
-                            </div>
-
-                        </div>
-
-                        {/* FLECHAS */}
-
-                        <button
-                            className="skin-arrow skin-arrow-left"
-                            onClick={anteriorPiel}
-                            aria-label="Piel anterior"
-                        >
-                            ←
-                        </button>
-
-                        <button
-                            className="skin-arrow skin-arrow-right"
-                            onClick={siguientePiel}
-                            aria-label="Siguiente piel"
-                        >
-                            →
-                        </button>
-
-                    </div>
-
-                    {/* SELECTOR INFERIOR */}
-
-                    <div className="skin-selector">
-
-                        {tiposPiel.map((tipo, indice) => (
-
-                            <button
-                                key={tipo.nombre}
-                                className={`skin-selector-item ${
-                                    pielActual === indice ? "active" : ""
-                                }`}
-                                onClick={() => seleccionarPiel(indice)}
-                            >
-
-                                <span className="skin-selector-number">
-                                    {String(indice + 1).padStart(2, "0")}
-                                </span>
-
-                                <span className="skin-selector-name">
-                                    {tipo.nombre.replace("Piel ", "")}
-                                </span>
-
-                            </button>
-
-                        ))}
-
-                    </div>
-
+                <div className="skin-image-frame">
+                    <img key={piel.imagen} src={piel.imagen} alt={piel.nombre} />
                 </div>
 
-            </section>
+                <div className="skin-floating-card">
+                    <span>SEUL GLOW</span>
+                    <strong>
+                        Tu piel,
+                        <br />
+                        tu ritual.
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>ç
+    
+     </div>
+
+
+         {modalAbierto && (
+        <div
+            className="skin-modal-overlay"
+            onClick={() => setModalAbierto(false)}
+        >
+            <div className="skin-modal" onClick={(e) => e.stopPropagation()}>
+
+                <button
+                    className="skin-modal-close"
+                    onClick={() => setModalAbierto(false)}
+                    aria-label="Cerrar"
+                >
+                    ×
+                </button>
+
+                <span className="skin-label">{piel.etiqueta}</span>
+                <h3>{piel.nombre}</h3>
+                <p>{piel.descripcion}</p>
+
+                <a
+                    href="#productos"
+                    className="skin-product-button on-light"
+                    onClick={() => setModalAbierto(false)}
+                >
+                    DESCUBRIR PRODUCTOS
+                    <span>→</span>
+                </a>
+
+            </div>
+        </div>
+    )}
+</section>
 
 
             {/* =====================================================
