@@ -472,15 +472,31 @@ img {
 
     display: grid;
 
-    grid-template-columns:
-        1.35fr 0.65fr;
+grid-template-columns: 1fr 1fr; 
 
     align-items: center;
 
     gap: 50px;
 }
 
+.hero-main.con-video {
+    position: relative;
+}
 
+.hero-main.con-video .hero-video {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48%;
+    height: 380px;
+}
+
+.hero-main.con-video .hero-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 /* =========================================================
    10. TEXTO
    ========================================================= */

@@ -118,7 +118,7 @@ function Header({ paginaActual, setPaginaActual }) {
                             🌸 SEOUL GLOW
                             <small>Korean Skincare</small>
                         </a>
-    
+
                         <nav className="hero-menu">
                             <a onClick={() => setPaginaActual("productos")}>Productos</a>
                             <a onClick={() => setPaginaActual("home")} href="#piel">Tipos de piel</a>
@@ -148,10 +148,10 @@ function Header({ paginaActual, setPaginaActual }) {
                             </button>
 
                         </div>
-                    
+
                     </header>
 
-                    <div className="hero-main">
+                    <div className={`hero-main ${paginaActual === "rutinas" ? "con-video" : ""}`}>
 
                         <div className="hero-copy">
 
@@ -179,6 +179,16 @@ function Header({ paginaActual, setPaginaActual }) {
                                     Explorar favoritos
                                 </a>
                             </div>
+
+                            {paginaActual === "rutinas" && (
+                                <div className="hero-video">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/Ws3b4Zgsj-0"
+                                        title="Video de skincare"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            )}
 
                         </div>
 
