@@ -168,27 +168,8 @@ function Home() {
                     <div className="skin-glow skin-glow-one"></div>
                     <div className="skin-glow skin-glow-two"></div>
 
-            {/* MENÚ DE CATEGORÍAS — ahora arriba */}
-            <div className="skin-selector">
-            {tiposPiel.map((tipo, indice) => (
-                <button
-                    key={tipo.nombre}
-                    className={`skin-selector-item ${
-                        pielActual === indice ? "active" : ""
-                    }`}
-                    onClick={() => seleccionarPiel(indice)}
-                >
-                    <span className="skin-selector-number">
-                        {String(indice + 1).padStart(2, "0")}
-                    </span>
-                    <span className="skin-selector-name">
-                        {tipo.nombre.replace("Piel ", "")}
-                    </span>
-                </button>
-                ))}
-             </div>
-
-            <div className="skin-experience-heading">
+             {/* CABECERA — ahora primero, más grande */}
+        <div className="skin-experience-heading">
             <span className="section-eyebrow">CUIDADO PERSONALIZADO</span>
             <h2>
                 Conoce lo que
@@ -198,18 +179,48 @@ function Home() {
             <p>
                 Descubre el cuidado que mejor acompaña las necesidades de tu piel.
             </p>
+        </div>
+        
+{/* MENÚ — ahora debajo del título, en su propia tarjeta */}
+        <div className="skin-selector-wrap">
+            <div className="skin-selector">
+                {tiposPiel.map((tipo, indice) => (
+                    <button
+                        key={tipo.nombre}
+                        className={`skin-selector-item ${
+                            pielActual === indice ? "active" : ""
+                        }`}
+                        onClick={() => seleccionarPiel(indice)}
+                    >
+                        <span className="skin-selector-number">
+                            {String(indice + 1).padStart(2, "0")}
+                        </span>
+                        <span className="skin-selector-name">
+                            {tipo.nombre.replace("Piel ", "")}
+                        </span>
+                    </button>
+                ))}
             </div>
+        </div>
 
         {/* CONTENIDO PRINCIPAL */}
         <div className="skin-showcase">
 
             <div className="skin-showcase-content">
 
-                <div className="skin-counter">
-                    <span>{String(pielActual + 1).padStart(2, "0")}</span>
-                    <div></div>
-                    <small>{String(tiposPiel.length).padStart(2, "0")}</small>
+                {/* BARRA DE PROGRESO SEGMENTADA */}
+                <div className="skin-counter-bar">
+                    {tiposPiel.map((_, indice) => (
+                        <span
+                            key={indice}
+                            className={`skin-counter-segment ${
+                                indice === pielActual ? "active" : ""
+                            } ${indice < pielActual ? "done" : ""}`}
+                        ></span>
+                    ))}
                 </div>
+
+                <span className="skin-label">{piel.etiqueta}</span>
 
                 <button
                     className="skin-subtitle-trigger"
@@ -224,33 +235,20 @@ function Home() {
                     <span>→</span>
                 </a>
 
-                </div>
+            </div>
 
-                        {/* IMAGEN */}
+                 {/* IMAGEN */}
 
-                        <div className="skin-showcase-visual">
-
+<div className="skin-showcase-visual">
                 <div className="skin-image-aura"></div>
-
                 <div className="skin-image-frame">
                     <img key={piel.imagen} src={piel.imagen} alt={piel.nombre} />
                 </div>
-
-                <div className="skin-floating-card">
-                    <span>SEUL GLOW</span>
-                    <strong>
-                        Tu piel,
-                        <br />
-                        tu ritual.
-                    </strong>
-                </div>
-
             </div>
 
-        </div>ç
-    
-     </div>
+        </div>
 
+    </div>
 
          {modalAbierto && (
         <div
