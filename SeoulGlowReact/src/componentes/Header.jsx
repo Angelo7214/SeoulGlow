@@ -9,6 +9,7 @@ const heroPorPagina = {
                 button: "DESCUBRIR PRODUCTOS",
                 buttonLink: "#productos",
                 image: "/Img/Imagen fondo 1.png",
+                imagenFrontal: "/Img/Modelo 1.png",
             },
         ],
     },
@@ -21,6 +22,7 @@ const heroPorPagina = {
                 description: "Explora nuestra selección curada de marcas coreanas.",
                 button: "VER CATÁLOGO",
                 image: "/Img/Imagen fondo 2.png",
+                imagenFrontal: "/Img/Modelo 2.png",
             },
         ],
     },
@@ -33,6 +35,7 @@ const heroPorPagina = {
                 description: "Verifica tus productos antes de finalizar tu compra.",
                 button: "SEGUIR COMPRANDO",
                 image: "/Img/Imagen fondo 3.png",
+                imagenFrontal: "/Img/Modelo 3.jpg",
             },
         ],
     },
@@ -45,6 +48,7 @@ const heroPorPagina = {
                 description: "Gestiona tus pedidos, direcciones y preferencias.",
                 button: "IR A PRODUCTOS",
                 image: "/Img/Imagen fondo 4.png",
+                imagenFrontal: "/Img/Modelo 4.jpg",
             },
         ],
     },
@@ -57,6 +61,7 @@ const heroPorPagina = {
                 description: "Así nació nuestra pasión por el K-Beauty.",
                 button: "DESCUBRIR MÁS",
                 image: "/Img/Imagen fondo 6.png",
+                imagenFrontal: "/Img/Modelo 5.jpg",
             },
         ],
     },
@@ -73,7 +78,6 @@ const heroPorPagina = {
         ],
     },
 };
-
 const beneficiosHero = [
     { icono: "🌿", titulo: "Ingredientes naturales" },
     { icono: "💧", titulo: "Testado dermatológicamente" },
@@ -190,7 +194,11 @@ function Header({ paginaActual, setPaginaActual }) {
                             )}
 
                         </div>
-
+                        {bannerData.imagenFrontal && (
+        <div className="hero-image-glass">
+            <img src={bannerData.imagenFrontal} alt={bannerData.title} />
+        </div>
+    )}
                     </div>
 
                     <div className="hero-bottom">

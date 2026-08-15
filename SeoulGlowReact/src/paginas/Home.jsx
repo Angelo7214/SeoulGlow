@@ -13,7 +13,7 @@ function Home() {
         },
         {
             nombre: "Piel grasa",
-            imagen: "/Img/Piel grasa.png",
+            imagen: "/Img/Piel con acne.png",
             descripcion:
                 "Busca fórmulas ligeras que ayuden a controlar el exceso de sebo sin dejar una sensación pesada.",
             etiqueta: "EQUILIBRIO Y FRESCURA",
@@ -69,7 +69,7 @@ function Home() {
             nombre: "Advanced Snail 96 Mucin Power Essence",
             categoria: "Esencia",
             precio: "S/ 79.90",
-            imagen: "/Img/COSRX LIMPIADOR 2.png",
+            imagen: "/Img/COSRX LIMPIADOR 2.jfif.jpeg",
             favorito: true,
         },
         {
@@ -78,7 +78,7 @@ function Home() {
             nombre: "Heartleaf 77% Soothing Toner",
             categoria: "Tónico",
             precio: "S/ 89.90",
-            imagen: "/Img/ANUA TONIC.png",
+            imagen: "/Img/ANUA TONICO.jpg",
             favorito: true,
         },
         {
@@ -87,7 +87,7 @@ function Home() {
             nombre: "Madagascar Centella Ampoule",
             categoria: "Ampolla",
             precio: "S/ 99.90",
-            imagen: "/Img/Skin1004.png",
+            imagen: "/Img/Madagascar Centella Tone Brightening Ampolla de cápsulas.png",
             favorito: false,
         },
     ];
@@ -477,9 +477,9 @@ function Home() {
 
                 </div>
 
-                <div className="store-modern-visual">
-                    📍
-                </div>
+              <div className="store-modern-visual">
+    <img src="/Img/Imagen de Ubicacion.png" alt="Encuentra tu tienda Seoul Glow" />
+</div>
 
             </section>
 

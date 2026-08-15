@@ -3,12 +3,12 @@ import { useState } from 'react';
 const productos = [
     { id: 1, marca: 'ANUA', nombre: 'Anua Heartleaf 77% Soothing Toner', categoria: 'tonicos', piel: 'mixta', precio: 89.90, antes: 112.38, descuento: 20, imagen: 'ANUA TONICO.jpg' },
     { id: 2, marca: 'BEAUTY OF JOSEON', nombre: 'Tónico Glow Replenishing Rice Milk', categoria: 'tonicos', piel: 'normal', precio: 42.00, imagen: 'BEAUTY OF JOSEON TONICO.png' },
-    { id: 3, marca: 'COSRX', nombre: 'Cosrx Aloe Soothing Sun Cream Protector Solar', categoria: 'protectores', piel: 'normal', precio: 57.00, imagen: 'COSRX PROTECTR SOLAR 2.jfif' },
+    { id: 3, marca: 'COSRX', nombre: 'Cosrx Aloe Soothing Sun Cream Protector Solar', categoria: 'protectores', piel: 'normal', precio: 57.00, imagen: 'COSRX PROTECTR SOLAR 2.jfif.jpeg' },
     { id: 4, marca: 'ANUA', nombre: 'Anua Niacinamide 10% + TXA 4% Serum', categoria: 'serums', piel: 'todas', precio: 90.90, antes: 113.62, descuento: 20, imagen: 'ANUA SERUM ANTOMANCHA.jpeg' },
-    { id: 5, marca: 'BEAUTY OF JOSEON', nombre: 'Beauty of Joseon Glow Deep Serum Rice + Alpha-Arbutin', categoria: 'serums', piel: 'todas', precio: 79.90, imagen: 'BEAUTY OF JOSEON SERUM DESPIGME.jpeg' },
+    { id: 5, marca: 'BEAUTY OF JOSEON', nombre: 'Beauty of Joseon Glow Deep Serum Rice + Alpha-Arbutin', categoria: 'serums', piel: 'todas', precio: 79.90, imagen: 'BEAUTY OF JOSEON SERUM DESPIGMENTANTE.jpeg' },
     { id: 6, marca: 'SKIN1004', nombre: 'Madagascar Centella Hyalu-Cica Blue Serum', categoria: 'serums', piel: 'sensible', precio: 84.90, imagen: 'Beauty of Joseon, Suero calmante.png' },
     { id: 7, marca: 'ANUA', nombre: 'Anua Protector Solar Entero', categoria: 'protectores', piel: 'grasa', precio: 65.00, antes: 72.00, descuento: 10, imagen: 'ANUA PROTECTOR SOLAR ENTERO.jpeg' },
-    { id: 8, marca: 'BEAUTY OF JOSEON', nombre: 'Beauty of Joseon Relief Sun: Rice + Probiotics', categoria: 'protectores', piel: 'sensible', precio: 68.00, imagen: 'BEAUTY OF JOSEON RELIEF SUN  RICE ...jpeg' },
+    { id: 8, marca: 'BEAUTY OF JOSEON', nombre: 'Beauty of Joseon Relief Sun: Rice + Probiotics', categoria: 'protectores', piel: 'sensible', precio: 68.00, imagen: 'BEAUTY OF JOSEON RELIEF SUN  RICE + PROBIOTICS.png' },
 ];
 
 const tiposPiel = ['normal', 'seca', 'grasa', 'mixta', 'sensible', 'madura'];

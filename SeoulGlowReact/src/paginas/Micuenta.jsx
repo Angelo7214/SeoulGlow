@@ -9,7 +9,7 @@ const pedidos = [
 const favoritos = [
     { marca: 'ANUA', nombre: 'Heartleaf 77% Soothing Toner', precio: 79.90, antes: 99.90, imagen: 'ANUA TONICO.jpg' },
     { marca: 'COSRX', nombre: 'Advanced Snail 96 Mucin Power Essence', precio: 89.90, antes: 105.90, imagen: 'COSRX TONICO.jpg' },
-    { marca: 'BEAUTY OF JOSEON', nombre: 'Relief Sun: Rice + Probiotics SPF50+', precio: 69.90, imagen: 'BEAUTY OF JOSEON RELIEF SUN  RICE ...jpeg' },
+    { marca: 'BEAUTY OF JOSEON', nombre: 'Relief Sun: Rice + Probiotics SPF50+', precio: 69.90, imagen: 'BEAUTY OF JOSEON RELIEF SUN  RICE + PROBIOTICS.png' },
 ];
 
 const tabs = [
