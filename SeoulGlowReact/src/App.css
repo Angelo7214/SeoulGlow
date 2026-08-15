@@ -5571,11 +5571,16 @@ nav.main a:hover::after {
 .wrap.account-layout::before {
     content: "";
     position: absolute;
-    inset: -40px -5% -60px;
+    top: -40px;
+    bottom: -60px;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
     z-index: -1;
-    background:
-        radial-gradient(circle at 15% 20%, rgba(232, 68, 122, .08), transparent 30%),
-        radial-gradient(circle at 90% 80%, rgba(84, 29, 50, .06), transparent 30%);
+    background-image: url("/Img/Mi_cuenta_fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .account-sidebar {
