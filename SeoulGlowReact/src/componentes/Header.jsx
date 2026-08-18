@@ -143,7 +143,7 @@ function Header({ paginaActual, setPaginaActual }) {
                                 onClick={() => setPaginaActual("carrito")}
                             >
                                 🛒
-                                <span>2</span>
+                                <span>3</span>
                             </button>
 
                             <button type="button" aria-label="Menú" className="hero-icon menu-icon">
